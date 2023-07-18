@@ -1,0 +1,27 @@
+name: Test the action
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  test:
+    timeout-minutes: 20
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Basic Installation
+        uses: ./
+      - run: ./move.sh
+      - run: delta --show-config
+      - run: cat ~/.gitconfig
+      - run: pretty-diff
