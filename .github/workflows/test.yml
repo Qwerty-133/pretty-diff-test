@@ -14,11 +14,7 @@ defaults:
 jobs:
   test:
     timeout-minutes: 20
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [windows-2022]
-      fail-fast: false
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
