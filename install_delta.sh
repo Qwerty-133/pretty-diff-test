@@ -8,7 +8,7 @@ TERM_ARG='xterm-256color'
 RED="$(tput setaf 9 -T "${TERM_ARG}" || printf '')"
 GREEN="$(tput setaf 10 -T "${TERM_ARG}" || printf '')"
 CYAN="$(tput setaf 12 -T "${TERM_ARG}" || printf '')"
-RESET="$(tput sgr0 || printf '')"
+RESET="$(tput sgr0 -T "${TERM_ARG}" || printf '')"
 readonly RED
 readonly GREEN
 readonly CYAN
@@ -19,6 +19,25 @@ if [[ -e "${DELTA_HOME}" ]]; then
   rm -rf "${DELTA_HOME}"
 fi
 readonly HEADER="Authorization: Bearer ${GITHUB_TOKEN}"
+read -r -d '' ALIAS_SCRIPT <<EOM || true
+#!/bin/bash
+git diff --color "\$@" | delta
+EOM
+readonly DELTA_DEFAULTS=(
+  'merge.conflictstyle: diff3'
+  "include.path: ${DELTA_HOME}/themes.gitconfig"
+  'diff.colorMoved: default'
+
+  'delta.paging: never'
+  'delta.true-color: never'
+  'delta.navigate: false'
+  'delta.dark: true'
+  'delta.hyperlinks: false'
+
+  'delta.features: mantis-shrimp'
+  'delta.side-by-side: false'
+  'delta.keep-plus-minus-markers: false'
+)
 
 # Print a message to STDOUT in the specified colour.
 print() {
@@ -53,7 +72,7 @@ else
 fi
 readonly tag
 
-declare -Ar asset_map
+declare -A asset_map
 asset_map=(
   [Windows_X64]="delta-${tag}-x86_64-pc-windows-msvc.zip"
   [Linux_X64]="delta-${tag}-x86_64-unknown-linux-gnu.tar.gz"
@@ -63,6 +82,7 @@ asset_map=(
   [MacOS_X64]="delta-${tag}-x86_64-apple-darwin.tar.gz"
   [MacOS_ARM64]="delta-${tag}-aarch64-apple-darwin.tar.gz"
 )
+declare -r asset_map
 
 readonly asset="${asset_map["${RUNNER_OS}_${RUNNER_ARCH}"]}"
 if [[ -z "${asset}" ]]; then
@@ -72,7 +92,8 @@ fi
 
 readonly download_url="https://github.com/dandavison/delta/releases/download/${tag}/${asset}"
 print "${CYAN}" "Downloading delta v${tag} from ${download_url} to ${RUNNER_TEMP}...\n"
-curl "${download_url}" --fail --location --header "${HEADER}" --output "${RUNNER_TEMP}/${asset}"
+curl "${download_url}" --silent --fail --location --header "${HEADER}" \
+ --output "${RUNNER_TEMP}/${asset}"
 
 print "${CYAN}" 'Extracting files...\n'
 if [[ "${RUNNER_OS}" == 'Windows' ]]; then
@@ -94,29 +115,12 @@ print "${CYAN}" 'Testing that the delta executable works...\n'
 "${DELTA_HOME}/delta" --version
 
 print "${CYAN}" 'Downloading delta themes...\n'
-readonly theme_url="https://raw.githubusercontent.com/dandavison/delta/master/themes.gitconfig"
+readonly theme_url='https://raw.githubusercontent.com/dandavison/delta/master/themes.gitconfig'
 curl "${theme_url}" --silent --fail --location --header "${HEADER}" --output \
  "${DELTA_HOME}/themes.gitconfig"
 
 print "${CYAN}" 'Configuring delta defaults...\n'
-readonly defaults=(
-  "merge.conflictstyle: diff3"
-  "include.path: ${DELTA_HOME}/themes.gitconfig"
-  "diff.colorMoved: default"
-
-  "delta.paging: never"
-  "delta.true-color: always"
-  "delta.navigate: false"
-  "delta.dark: true"
-  "delta.hyperlinks: false"
-
-  # Default theme for this action
-  "delta.features: mantis-shrimp"
-  "delta.side-by-side: false"
-  "delta.keep-plus-minus-markers: false"
-)
-
-for default in "${defaults[@]}"; do
+for default in "${DELTA_DEFAULTS[@]}"; do
   key="${default%%:*}"
   value="${default#*: }"
 
@@ -124,11 +128,6 @@ for default in "${defaults[@]}"; do
 done
 
 print "${CYAN}" 'Creating the pretty-diff alias...\n'
-read -r -d '' ALIAS_SCRIPT <<EOM || true
-#!/bin/bash
-TERM=xterm-256color git diff --color "\$@" | delta
-EOM
-
 echo "${ALIAS_SCRIPT}" > "${DELTA_HOME}/pretty-diff"
 chmod +x "${DELTA_HOME}/pretty-diff"
 

@@ -14,14 +14,19 @@ defaults:
 jobs:
   test:
     timeout-minutes: 20
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-2022]
+      fail-fast: false
 
     steps:
       - uses: actions/checkout@v3
-
       - name: Basic Installation
         uses: ./
       - run: ./move.sh
       - run: delta --show-config
       - run: cat ~/.gitconfig
       - run: pretty-diff
+      - run: pretty-diff
+        shell: pwsh

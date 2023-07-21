@@ -25,5 +25,5 @@ runs:
       run: "${GITHUB_ACTION_PATH}/install_delta.sh"
       env:
         GITHUB_TOKEN: ${{ github.token }}
-        DELTA_ACTION_HOME: ${{ inputs.version }}
-        DELTA_ACTION_VERSION: ${{ inputs.configure-git }}
+        DELTA_ACTION_VERSION: ${{ inputs.version }}
+        DELTA_ACTION_HOME: ${{ inputs.delta-home }}
