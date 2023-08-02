@@ -1,312 +1,387 @@
-2023-07-18T18:14:15.0091451Z Requested labels: ubuntu-22.04
-2023-07-18T18:14:15.0091862Z Job defined at: Qwerty-133/pretty-diff-test/.github/workflows/test.yml@refs/heads/test
-2023-07-18T18:14:15.0092028Z Waiting for a runner to pick up this job...
-2023-07-18T18:14:17.1604071Z Job is waiting for a hosted runner to come online.
-2023-07-18T18:14:19.1446616Z Job is about to start running on the hosted runner: GitHub Actions 2 (hosted)
-2023-07-18T18:14:23.5963206Z Current runner version: '2.306.0'
-2023-07-18T18:14:23.5991824Z ##[group]Operating System
-2023-07-18T18:14:23.5992342Z Ubuntu
-2023-07-18T18:14:23.5992635Z 22.04.2
-2023-07-18T18:14:23.5992935Z LTS
-2023-07-18T18:14:23.5993257Z ##[endgroup]
-2023-07-18T18:14:23.5993581Z ##[group]Runner Image
-2023-07-18T18:14:23.5993927Z Image: ubuntu-22.04
-2023-07-18T18:14:23.5994513Z Version: 20230710.1.0
-2023-07-18T18:14:23.5995040Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230710.1/images/linux/Ubuntu2204-Readme.md
-2023-07-18T18:14:23.5995726Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230710.1
-2023-07-18T18:14:23.5996129Z ##[endgroup]
-2023-07-18T18:14:23.5996492Z ##[group]Runner Image Provisioner
-2023-07-18T18:14:23.5996853Z 2.0.238.1
-2023-07-18T18:14:23.5997113Z ##[endgroup]
-2023-07-18T18:14:23.5997804Z ##[group]GITHUB_TOKEN Permissions
-2023-07-18T18:14:23.5998383Z Contents: write
-2023-07-18T18:14:23.5998700Z Metadata: read
-2023-07-18T18:14:23.5999220Z ##[endgroup]
-2023-07-18T18:14:23.6002982Z Secret source: Actions
-2023-07-18T18:14:23.6003494Z Prepare workflow directory
-2023-07-18T18:14:23.6934268Z Prepare all required actions
-2023-07-18T18:14:23.7126831Z Getting action download info
-2023-07-18T18:14:23.9648626Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
-2023-07-18T18:14:24.6517367Z Complete job name: test (ubuntu-22.04)
-2023-07-18T18:14:24.7481914Z ##[group]Run actions/checkout@v3
-2023-07-18T18:14:24.7482363Z with:
-2023-07-18T18:14:24.7482723Z   repository: Qwerty-133/pretty-diff-test
-2023-07-18T18:14:24.7483336Z   token: ***
-2023-07-18T18:14:24.7483599Z   ssh-strict: true
-2023-07-18T18:14:24.7483945Z   persist-credentials: true
-2023-07-18T18:14:24.7484322Z   clean: true
-2023-07-18T18:14:24.7484621Z   sparse-checkout-cone-mode: true
-2023-07-18T18:14:24.7484972Z   fetch-depth: 1
-2023-07-18T18:14:24.7485287Z   lfs: false
-2023-07-18T18:14:24.7485535Z   submodules: false
-2023-07-18T18:14:24.7485911Z   set-safe-directory: true
-2023-07-18T18:14:24.7486257Z ##[endgroup]
-2023-07-18T18:14:24.9723931Z Syncing repository: Qwerty-133/pretty-diff-test
-2023-07-18T18:14:24.9726260Z ##[group]Getting Git version info
-2023-07-18T18:14:24.9727165Z Working directory is '/home/runner/work/pretty-diff-test/pretty-diff-test'
-2023-07-18T18:14:24.9728644Z [command]/usr/bin/git version
-2023-07-18T18:14:24.9782963Z git version 2.41.0
-2023-07-18T18:14:24.9812718Z ##[endgroup]
-2023-07-18T18:14:24.9831680Z Temporarily overriding HOME='/home/runner/work/_temp/46a97f00-fe45-41f5-bc98-c5f19663f02c' before making global git config changes
-2023-07-18T18:14:24.9832429Z Adding repository directory to the temporary git global config as a safe directory
-2023-07-18T18:14:24.9838820Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pretty-diff-test/pretty-diff-test
-2023-07-18T18:14:24.9883101Z Deleting the contents of '/home/runner/work/pretty-diff-test/pretty-diff-test'
-2023-07-18T18:14:24.9889661Z ##[group]Initializing the repository
-2023-07-18T18:14:24.9894999Z [command]/usr/bin/git init /home/runner/work/pretty-diff-test/pretty-diff-test
-2023-07-18T18:14:24.9956918Z hint: Using 'master' as the name for the initial branch. This default branch name
-2023-07-18T18:14:24.9957594Z hint: is subject to change. To configure the initial branch name to use in all
-2023-07-18T18:14:24.9958238Z hint: of your new repositories, which will suppress this warning, call:
-2023-07-18T18:14:24.9958720Z hint: 
-2023-07-18T18:14:24.9959374Z hint: 	git config --global init.defaultBranch <name>
-2023-07-18T18:14:24.9959816Z hint: 
-2023-07-18T18:14:24.9960630Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-2023-07-18T18:14:24.9961296Z hint: 'development'. The just-created branch can be renamed via this command:
-2023-07-18T18:14:24.9961820Z hint: 
-2023-07-18T18:14:24.9962459Z hint: 	git branch -m <name>
-2023-07-18T18:14:24.9973031Z Initialized empty Git repository in /home/runner/work/pretty-diff-test/pretty-diff-test/.git/
-2023-07-18T18:14:24.9985635Z [command]/usr/bin/git remote add origin https://github.com/Qwerty-133/pretty-diff-test
-2023-07-18T18:14:25.0079980Z ##[endgroup]
-2023-07-18T18:14:25.0080832Z ##[group]Disabling automatic garbage collection
-2023-07-18T18:14:25.0081433Z [command]/usr/bin/git config --local gc.auto 0
-2023-07-18T18:14:25.0127623Z ##[endgroup]
-2023-07-18T18:14:25.0130544Z ##[group]Setting up auth
-2023-07-18T18:14:25.0133458Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2023-07-18T18:14:25.0140877Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2023-07-18T18:14:25.0435506Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2023-07-18T18:14:25.0469927Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2023-07-18T18:14:25.0692571Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2023-07-18T18:14:25.0731185Z ##[endgroup]
-2023-07-18T18:14:25.0732138Z ##[group]Fetching the repository
-2023-07-18T18:14:25.0741441Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +58fc57dfe67a56d38c310fedcd90e76cb78df222:refs/remotes/origin/test
-2023-07-18T18:14:25.3345967Z remote: Enumerating objects: 17, done.        
-2023-07-18T18:14:25.3346909Z remote: Counting objects:   5% (1/17)        
-2023-07-18T18:14:25.3348302Z remote: Counting objects:  11% (2/17)        
-2023-07-18T18:14:25.3348912Z remote: Counting objects:  17% (3/17)        
-2023-07-18T18:14:25.3349464Z remote: Counting objects:  23% (4/17)        
-2023-07-18T18:14:25.3405627Z remote: Counting objects:  29% (5/17)        
-2023-07-18T18:14:25.3405996Z remote: Counting objects:  35% (6/17)        
-2023-07-18T18:14:25.3406402Z remote: Counting objects:  41% (7/17)        
-2023-07-18T18:14:25.3406788Z remote: Counting objects:  47% (8/17)        
-2023-07-18T18:14:25.3407102Z remote: Counting objects:  52% (9/17)        
-2023-07-18T18:14:25.3407538Z remote: Counting objects:  58% (10/17)        
-2023-07-18T18:14:25.3407901Z remote: Counting objects:  64% (11/17)        
-2023-07-18T18:14:25.3408233Z remote: Counting objects:  70% (12/17)        
-2023-07-18T18:14:25.3408599Z remote: Counting objects:  76% (13/17)        
-2023-07-18T18:14:25.3408982Z remote: Counting objects:  82% (14/17)        
-2023-07-18T18:14:25.3409301Z remote: Counting objects:  88% (15/17)        
-2023-07-18T18:14:25.3409659Z remote: Counting objects:  94% (16/17)        
-2023-07-18T18:14:25.3410022Z remote: Counting objects: 100% (17/17)        
-2023-07-18T18:14:25.3410396Z remote: Counting objects: 100% (17/17), done.        
-2023-07-18T18:14:25.3410780Z remote: Compressing objects:   8% (1/12)        
-2023-07-18T18:14:25.3411177Z remote: Compressing objects:  16% (2/12)        
-2023-07-18T18:14:25.3411567Z remote: Compressing objects:  25% (3/12)        
-2023-07-18T18:14:25.3411898Z remote: Compressing objects:  33% (4/12)        
-2023-07-18T18:14:25.3412264Z remote: Compressing objects:  41% (5/12)        
-2023-07-18T18:14:25.3412668Z remote: Compressing objects:  50% (6/12)        
-2023-07-18T18:14:25.3412999Z remote: Compressing objects:  58% (7/12)        
-2023-07-18T18:14:25.3413374Z remote: Compressing objects:  66% (8/12)        
-2023-07-18T18:14:25.3413745Z remote: Compressing objects:  75% (9/12)        
-2023-07-18T18:14:25.3414091Z remote: Compressing objects:  83% (10/12)        
-2023-07-18T18:14:25.3414536Z remote: Compressing objects:  91% (11/12)        
-2023-07-18T18:14:25.3414937Z remote: Compressing objects: 100% (12/12)        
-2023-07-18T18:14:25.3415328Z remote: Compressing objects: 100% (12/12), done.        
-2023-07-18T18:14:25.3479395Z remote: Total 17 (delta 3), reused 8 (delta 0), pack-reused 0        
-2023-07-18T18:14:25.3531147Z From https://github.com/Qwerty-133/pretty-diff-test
-2023-07-18T18:14:25.3531862Z  * [new ref]         58fc57dfe67a56d38c310fedcd90e76cb78df222 -> origin/test
-2023-07-18T18:14:25.3560465Z ##[endgroup]
-2023-07-18T18:14:25.3561336Z ##[group]Determining the checkout info
-2023-07-18T18:14:25.3562091Z ##[endgroup]
-2023-07-18T18:14:25.3563791Z ##[group]Checking out the ref
-2023-07-18T18:14:25.3569004Z [command]/usr/bin/git checkout --progress --force -B test refs/remotes/origin/test
-2023-07-18T18:14:25.3616558Z Switched to a new branch 'test'
-2023-07-18T18:14:25.3617432Z branch 'test' set up to track 'origin/test'.
-2023-07-18T18:14:25.3627865Z ##[endgroup]
-2023-07-18T18:14:25.3664175Z [command]/usr/bin/git log -1 --format='%H'
-2023-07-18T18:14:25.3690929Z '58fc57dfe67a56d38c310fedcd90e76cb78df222'
-2023-07-18T18:14:25.4301518Z Prepare all required actions
-2023-07-18T18:14:25.4334196Z ##[group]Run ./
-2023-07-18T18:14:25.4334426Z with:
-2023-07-18T18:14:25.4334642Z   version: latest
-2023-07-18T18:14:25.4334862Z ##[endgroup]
-2023-07-18T18:14:25.4622417Z ##[group]Run ${GITHUB_ACTION_PATH}/install_delta.sh
-2023-07-18T18:14:25.4622842Z [36;1m${GITHUB_ACTION_PATH}/install_delta.sh[0m
-2023-07-18T18:14:25.4681649Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
-2023-07-18T18:14:25.4681987Z env:
-2023-07-18T18:14:25.4682474Z   GITHUB_TOKEN: ***
-2023-07-18T18:14:25.4682728Z   DELTA_ACTION_VERSION: latest
-2023-07-18T18:14:25.4682983Z   DELTA_ACTION_HOME: 
-2023-07-18T18:14:25.4683218Z ##[endgroup]
-2023-07-18T18:14:25.4923805Z [94mFetching the latest delta version...
-2023-07-18T18:14:25.8375027Z (B[m[94mDownloading delta v0.16.5 from https://github.com/dandavison/delta/releases/download/0.16.5/delta-0.16.5-x86_64-unknown-linux-gnu.tar.gz to /home/runner/work/_temp...
-2023-07-18T18:14:26.6223878Z (B[m[94mExtracting files...
-2023-07-18T18:14:26.6854666Z (B[m[94mMoving files to /home/runner/.delta...
-2023-07-18T18:14:26.6886563Z (B[m[94mAdding delta to PATH...
-2023-07-18T18:14:26.6887187Z (B[m[94mTesting that the delta executable works...
-2023-07-18T18:14:26.6906262Z (B[m[0mdelta 0.16.5
-2023-07-18T18:14:26.6913342Z [0m[94mDownloading delta themes...
-2023-07-18T18:14:26.9668557Z (B[m[94mConfiguring delta defaults...
-2023-07-18T18:14:26.9902122Z (B[m[94mCreating the pretty-diff alias...
-2023-07-18T18:14:26.9904908Z (B[m[92mSuccessfully installed delta v0.16.5.
-2023-07-18T18:14:26.9908394Z (B[m
-2023-07-18T18:14:26.9959132Z ##[group]Run ./move.sh
-2023-07-18T18:14:26.9959359Z [36;1m./move.sh[0m
-2023-07-18T18:14:27.0014483Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
-2023-07-18T18:14:27.0014750Z ##[endgroup]
-2023-07-18T18:14:27.0144883Z ##[group]Run delta --show-config
-2023-07-18T18:14:27.0145129Z [36;1mdelta --show-config[0m
-2023-07-18T18:14:27.0195463Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
-2023-07-18T18:14:27.0195717Z ##[endgroup]
-2023-07-18T18:14:27.0358550Z     commit-style                  = [1;3;38;2;255;210;26mbold italic "#ffd21a"[0m
-2023-07-18T18:14:27.0358966Z     file-style                    = omit normal
-2023-07-18T18:14:27.0359329Z     hunk-header-style             = [1;3mbold italic syntax[0m
-2023-07-18T18:14:27.0359703Z     minus-style                   = [48;2;93;0;30msyntax "#5d001e"[0m
-2023-07-18T18:14:27.0360086Z     minus-non-emph-style          = [48;2;93;0;30msyntax "#5d001e"[0m
-2023-07-18T18:14:27.0360487Z     minus-emph-style              = [1;48;2;184;0;0mbold syntax "#b80000"[0m
-2023-07-18T18:14:27.0360889Z     minus-empty-line-marker-style = [48;2;63;0;1mnormal "#3f0001"[0m
-2023-07-18T18:14:27.0361224Z     zero-style                    = syntax
-2023-07-18T18:14:27.0361599Z     plus-style                    = [48;2;0;68;51msyntax "#004433"[0m
-2023-07-18T18:14:27.0361959Z     plus-non-emph-style           = [48;2;0;68;51msyntax "#004433"[0m
-2023-07-18T18:14:27.0362344Z     plus-emph-style               = [1;48;2;0;120;0mbold syntax "#007800"[0m
-2023-07-18T18:14:27.0362945Z     plus-empty-line-marker-style  = [48;2;0;40;0mnormal "#002800"[0m
-2023-07-18T18:14:27.0363292Z     grep-file-style               = [35mpurple[0m
-2023-07-18T18:14:27.0363623Z     grep-line-number-style        = [32mgreen[0m
-2023-07-18T18:14:27.0363983Z     whitespace-error-style        = [38;2;40;0;80m"#280050"[0m
-2023-07-18T18:14:27.0364425Z     blame-palette                 = [48;2;0;0;0m#000000[0m [48;2;34;34;34m#222222[0m [48;2;68;68;68m#444444[0m
-2023-07-18T18:14:27.0364749Z     true-color                    = true
-2023-07-18T18:14:27.0365031Z     file-added-label              = [+]
-2023-07-18T18:14:27.0365325Z     file-modified-label           = [*]
-2023-07-18T18:14:27.0365605Z     file-removed-label            = [-]
-2023-07-18T18:14:27.0365894Z     file-renamed-label            = [->]
-2023-07-18T18:14:27.0367809Z     right-arrow                   = '⟶  '
-2023-07-18T18:14:27.0368058Z     hyperlinks                    = false
-2023-07-18T18:14:27.0368346Z     inspect-raw-lines             = true
-2023-07-18T18:14:27.0368665Z     keep-plus-minus-markers       = false
-2023-07-18T18:14:27.0368935Z     line-numbers                  = true
-2023-07-18T18:14:27.0369284Z     line-numbers-minus-style      = [1;38;2;255;0;81mbold "#ff0051"[0m
-2023-07-18T18:14:27.0370944Z     line-numbers-zero-style       = [3;38;2;170;170;170mitalic "#aaaaaa"[0m
-2023-07-18T18:14:27.0371627Z     line-numbers-plus-style       = [1;38;2;3;229;127mbold "#03e57f"[0m
-2023-07-18T18:14:27.0372190Z     line-numbers-left-style       = [38;2;22;136;240m"#1688f0"[0m
-2023-07-18T18:14:27.0372574Z     line-numbers-right-style      = [38;2;22;136;240m"#1688f0"[0m
-2023-07-18T18:14:27.0372918Z     line-numbers-left-format      = '{nm:>1}|'
-2023-07-18T18:14:27.0373253Z     line-numbers-right-format     = '{np:>1}|'
-2023-07-18T18:14:27.0373550Z     max-line-distance             = 0.6
-2023-07-18T18:14:27.0373823Z     max-line-length               = 512
-2023-07-18T18:14:27.0374113Z     diff-stat-align-width         = 48
-2023-07-18T18:14:27.0374412Z     line-fill-method              = spaces
-2023-07-18T18:14:27.0374637Z     navigate                      = false
-2023-07-18T18:14:27.0374906Z     navigate-regex                = 
-2023-07-18T18:14:27.0375133Z     pager                         = none
-2023-07-18T18:14:27.0375355Z     paging                        = never
-2023-07-18T18:14:27.0375616Z     side-by-side                  = false
-2023-07-18T18:14:27.0375923Z     syntax-theme                  = Monokai Extended
-2023-07-18T18:14:27.0376157Z     width                         = 80
-2023-07-18T18:14:27.0376354Z     tabs                          = 8
-2023-07-18T18:14:27.0376829Z     word-diff-regex               = '\w+'
-2023-07-18T18:14:27.0404691Z ##[group]Run cat ~/.gitconfig
-2023-07-18T18:14:27.0404936Z [36;1mcat ~/.gitconfig[0m
-2023-07-18T18:14:27.0454316Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
-2023-07-18T18:14:27.0454580Z ##[endgroup]
-2023-07-18T18:14:27.0537510Z [merge]
-2023-07-18T18:14:27.0537751Z 	conflictstyle = diff3
-2023-07-18T18:14:27.0537969Z [include]
-2023-07-18T18:14:27.0538207Z 	path = /home/runner/.delta/themes.gitconfig
-2023-07-18T18:14:27.0538452Z [diff]
-2023-07-18T18:14:27.0538628Z 	colorMoved = default
-2023-07-18T18:14:27.0538819Z [delta]
-2023-07-18T18:14:27.0538994Z 	paging = never
-2023-07-18T18:14:27.0539339Z 	true-color = always
-2023-07-18T18:14:27.0539537Z 	navigate = false
-2023-07-18T18:14:27.0539733Z 	dark = true
-2023-07-18T18:14:27.0539914Z 	hyperlinks = false
-2023-07-18T18:14:27.0540161Z 	features = mantis-shrimp
-2023-07-18T18:14:27.0540408Z 	side-by-side = false
-2023-07-18T18:14:27.0540676Z 	keep-plus-minus-markers = false
-2023-07-18T18:14:27.0563305Z ##[group]Run pretty-diff
-2023-07-18T18:14:27.0563543Z [36;1mpretty-diff[0m
-2023-07-18T18:14:27.0611925Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
-2023-07-18T18:14:27.0612194Z ##[endgroup]
-2023-07-18T18:14:27.0797260Z 
-2023-07-18T18:14:27.0798610Z [38;2;22;136;240m─────────────[0m[38;2;22;136;240m┐[0m
-2023-07-18T18:14:27.0799753Z [1;4;38;2;198;59;238m•[0m [1;4;38;2;198;59;238mLICENSE[0m:[1;38;2;255;210;26m1[0m: [38;2;22;136;240m│[0m
-2023-07-18T18:14:27.0800826Z [38;2;22;136;240m─────────────[0m[38;2;22;136;240m┴[0m[38;2;22;136;240m──────────────────────────────────────────────────────────────────[0m
-2023-07-18T18:14:27.0804469Z [38;2;22;136;240m[1;38;2;255;0;81m1[0m[38;2;22;136;240m|[1;38;2;3;229;127m [0m[38;2;22;136;240m|[48;2;93;0;30;38;2;248;248;242mMIT License[0m[48;2;93;0;30m[0K[0m
-2023-07-18T18:14:27.0805252Z [38;2;22;136;240m[1;38;2;255;0;81m [0m[38;2;22;136;240m|[1;38;2;3;229;127m1[0m[38;2;22;136;240m|[48;2;0;68;51;38;2;248;248;242mYES[0m[48;2;0;68;51m[0K[0m
-2023-07-18T18:14:27.0805909Z [38;2;22;136;240m[3;38;2;170;170;170m2[0m[38;2;22;136;240m|[3;38;2;170;170;170m2[0m[38;2;22;136;240m|[0m
-2023-07-18T18:14:27.0806430Z [38;2;22;136;240m[3;38;2;170;170;170m3[0m[38;2;22;136;240m|[3;38;2;170;170;170m3[0m[38;2;22;136;240m|[38;2;248;248;242mCopyright (c) 2023 Qwerty-133[0m
-2023-07-18T18:14:27.0806925Z [38;2;22;136;240m[1;38;2;255;0;81m4[0m[38;2;22;136;240m|[1;38;2;3;229;127m [0m[38;2;22;136;240m|[0m[48;2;93;0;30m[0K[0m
-2023-07-18T18:14:27.0807514Z [38;2;22;136;240m[3;38;2;170;170;170m5[0m[38;2;22;136;240m|[3;38;2;170;170;170m4[0m[38;2;22;136;240m|[38;2;248;248;242mPermission is hereby granted, free of charge, to any person obtaining a copy[0m
-2023-07-18T18:14:27.0808143Z [38;2;22;136;240m[3;38;2;170;170;170m6[0m[38;2;22;136;240m|[3;38;2;170;170;170m5[0m[38;2;22;136;240m|[38;2;248;248;242mof this software and associated documentation files (the "Software"), to deal[0m
-2023-07-18T18:14:27.0808776Z [38;2;22;136;240m[3;38;2;170;170;170m7[0m[38;2;22;136;240m|[3;38;2;170;170;170m6[0m[38;2;22;136;240m|[38;2;248;248;242min the Software without restriction, including without limitation the rights[0m
-2023-07-18T18:14:27.0811690Z 
-2023-07-18T18:14:27.0814744Z [38;2;22;136;240m───────────────────────────────────────────────────────────────────────[0m[38;2;22;136;240m┐[0m
-2023-07-18T18:14:27.0815708Z [1;4;38;2;198;59;238m•[0m [1;4;38;2;198;59;238mLICENSE[0m:[1;38;2;255;210;26m11[0m:[1;3;38;2;248;248;242m furnished to do so, subject to the following conditions: [0m[38;2;22;136;240m│[0m
-2023-07-18T18:14:27.0816367Z [38;2;22;136;240m───────────────────────────────────────────────────────────────────────[0m[38;2;22;136;240m┴[0m[38;2;22;136;240m────────[0m
-2023-07-18T18:14:27.0818531Z [38;2;22;136;240m[3;38;2;170;170;170m12[0m[38;2;22;136;240m|[3;38;2;170;170;170m11[0m[38;2;22;136;240m|[38;2;248;248;242mThe above copyright notice and this permission notice shall be included in all[0m
-2023-07-18T18:14:27.0819139Z [38;2;22;136;240m[3;38;2;170;170;170m13[0m[38;2;22;136;240m|[3;38;2;170;170;170m12[0m[38;2;22;136;240m|[38;2;248;248;242mcopies or substantial portions of the Software.[0m
-2023-07-18T18:14:27.0820674Z [38;2;22;136;240m[3;38;2;170;170;170m14[0m[38;2;22;136;240m|[3;38;2;170;170;170m13[0m[38;2;22;136;240m|[0m
-2023-07-18T18:14:27.0822229Z [38;2;22;136;240m[1;38;2;255;0;81m15[0m[38;2;22;136;240m|[1;38;2;3;229;127m  [0m[38;2;22;136;240m|[48;2;93;0;30;38;2;248;248;242mTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR[0m[48;2;93;0;30m[0K[0m
-2023-07-18T18:14:27.0823608Z [38;2;22;136;240m[1;38;2;255;0;81m  [0m[38;2;22;136;240m|[1;38;2;3;229;127m14[0m[38;2;22;136;240m|[48;2;0;68;51;38;2;248;248;242mTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS [1;48;2;0;120;0mORTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS ORTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS [0m[48;2;0;68;51;38;2;248;248;242mOR[0m[48;2;0;68;51m[0K[0m
-2023-07-18T18:14:27.0824578Z [38;2;22;136;240m[3;38;2;170;170;170m16[0m[38;2;22;136;240m|[3;38;2;170;170;170m15[0m[38;2;22;136;240m|[38;2;248;248;242mIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,[0m
-2023-07-18T18:14:27.0825447Z [38;2;22;136;240m[3;38;2;170;170;170m17[0m[38;2;22;136;240m|[3;38;2;170;170;170m16[0m[38;2;22;136;240m|[38;2;248;248;242mFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE[0m
-2023-07-18T18:14:27.0826274Z [38;2;22;136;240m[3;38;2;170;170;170m18[0m[38;2;22;136;240m|[3;38;2;170;170;170m17[0m[38;2;22;136;240m|[38;2;248;248;242mAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER[0m
-2023-07-18T18:14:27.0827002Z [38;2;22;136;240m[3;38;2;170;170;170m19[0m[38;2;22;136;240m|[3;38;2;170;170;170m18[0m[38;2;22;136;240m|[38;2;248;248;242mLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,[0m
-2023-07-18T18:14:27.0828130Z [38;2;22;136;240m[1;38;2;255;0;81m20[0m[38;2;22;136;240m|[1;38;2;3;229;127m  [0m[38;2;22;136;240m|[48;2;93;0;30;38;2;248;248;242mOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE[0m[48;2;93;0;30m[0K[0m
-2023-07-18T18:14:27.0828733Z [38;2;22;136;240m[3;38;2;170;170;170m21[0m[38;2;22;136;240m|[3;38;2;170;170;170m19[0m[38;2;22;136;240m|[38;2;248;248;242mSOFTWARE.[0m
-2023-07-18T18:14:27.0833060Z 
-2023-07-18T18:14:27.0839218Z [38;2;22;136;240m───────────────────────────────────[0m[38;2;22;136;240m┐[0m
-2023-07-18T18:14:27.0839817Z [1;4;38;2;198;59;238m•[0m [1;4;38;2;198;59;238maction.yml[0m:[1;38;2;255;210;26m3[0m:[1;3;38;2;248;248;242m [38;2;249;38;114mauthor[38;2;248;248;242m: [38;2;230;219;116mQwerty-133[38;2;248;248;242m [0m[38;2;22;136;240m│[0m
-2023-07-18T18:14:27.0842175Z [38;2;22;136;240m───────────────────────────────────[0m[38;2;22;136;240m┴[0m[38;2;22;136;240m────────────────────────────────────────────[0m
-2023-07-18T18:14:27.0846515Z [38;2;22;136;240m[3;38;2;170;170;170m 3[0m[38;2;22;136;240m|[3;38;2;170;170;170m 3[0m[38;2;22;136;240m|[38;2;249;38;114mdescription[38;2;248;248;242m: [38;2;230;219;116mInstalls delta, and configures git to use it.[0m
-2023-07-18T18:14:27.0849593Z [38;2;22;136;240m[3;38;2;170;170;170m 4[0m[38;2;22;136;240m|[3;38;2;170;170;170m 4[0m[38;2;22;136;240m|[0m
-2023-07-18T18:14:27.0852854Z [38;2;22;136;240m[3;38;2;170;170;170m 5[0m[38;2;22;136;240m|[3;38;2;170;170;170m 5[0m[38;2;22;136;240m|[38;2;249;38;114mbranding[38;2;248;248;242m:[0m
-2023-07-18T18:14:27.0858049Z [38;2;22;136;240m[1;38;2;255;0;81m 6[0m[38;2;22;136;240m|[1;38;2;3;229;127m  [0m[38;2;22;136;240m|[48;2;93;0;30;38;2;248;248;242m  [38;2;249;38;114micon[38;2;248;248;242m: [1;48;2;184;0;0;38;2;230;219;116mfile-plus[0m[48;2;93;0;30m[0K[0m
-2023-07-18T18:14:27.0858937Z [38;2;22;136;240m[1;38;2;255;0;81m 7[0m[38;2;22;136;240m|[1;38;2;3;229;127m  [0m[38;2;22;136;240m|[48;2;93;0;30;38;2;248;248;242m  [38;2;249;38;114mcolor[38;2;248;248;242m: [38;2;230;219;116mgreen[0m[48;2;93;0;30m[0K[0m
-2023-07-18T18:14:27.0859742Z [38;2;22;136;240m[1;38;2;255;0;81m  [0m[38;2;22;136;240m|[1;38;2;3;229;127m 6[0m[38;2;22;136;240m|[48;2;0;68;51;38;2;248;248;242m  [38;2;249;38;114micon[38;2;248;248;242m:[0m[38;2;40;0;80m [0m[48;2;0;68;51m[0K[0m
-2023-07-18T18:14:27.0860243Z [38;2;22;136;240m[3;38;2;170;170;170m 8[0m[38;2;22;136;240m|[3;38;2;170;170;170m 7[0m[38;2;22;136;240m|[0m
-2023-07-18T18:14:27.0862495Z [38;2;22;136;240m[3;38;2;170;170;170m 9[0m[38;2;22;136;240m|[3;38;2;170;170;170m 8[0m[38;2;22;136;240m|[38;2;249;38;114minputs[38;2;248;248;242m:[0m
-2023-07-18T18:14:27.0865796Z [38;2;22;136;240m[3;38;2;170;170;170m10[0m[38;2;22;136;240m|[3;38;2;170;170;170m 9[0m[38;2;22;136;240m|[38;2;248;248;242m  [38;2;249;38;114mversion[38;2;248;248;242m:[0m
-2023-07-18T18:14:27.0868664Z 
-2023-07-18T18:14:27.0872201Z [38;2;22;136;240m─────────────────────────[0m[38;2;22;136;240m┐[0m
-2023-07-18T18:14:27.0875532Z [1;4;38;2;198;59;238m•[0m [1;4;38;2;198;59;238maction.yml[0m:[1;38;2;255;210;26m11[0m:[1;3;38;2;248;248;242m [38;2;249;38;114minputs[38;2;248;248;242m: [0m[38;2;22;136;240m│[0m
-2023-07-18T18:14:27.0878476Z [38;2;22;136;240m─────────────────────────[0m[38;2;22;136;240m┴[0m[38;2;22;136;240m──────────────────────────────────────────────────────[0m
-2023-07-18T18:14:27.0882359Z [38;2;22;136;240m[3;38;2;170;170;170m12[0m[38;2;22;136;240m|[3;38;2;170;170;170m11[0m[38;2;22;136;240m|[38;2;248;248;242m    [38;2;249;38;114mrequired[38;2;248;248;242m: [38;2;190;132;255mtrue[0m
-2023-07-18T18:14:27.0886310Z [38;2;22;136;240m[3;38;2;170;170;170m13[0m[38;2;22;136;240m|[3;38;2;170;170;170m12[0m[38;2;22;136;240m|[38;2;248;248;242m    [38;2;249;38;114mdefault[38;2;248;248;242m: [38;2;230;219;116m"latest"[0m
-2023-07-18T18:14:27.0889752Z [38;2;22;136;240m[3;38;2;170;170;170m14[0m[38;2;22;136;240m|[3;38;2;170;170;170m13[0m[38;2;22;136;240m|[38;2;248;248;242m  [38;2;249;38;114mdelta-home[38;2;248;248;242m:[0m
-2023-07-18T18:14:27.0895316Z [38;2;22;136;240m[1;38;2;255;0;81m15[0m[38;2;22;136;240m|[1;38;2;3;229;127m  [0m[38;2;22;136;240m|[48;2;93;0;30;38;2;248;248;242m    [38;2;249;38;114mdescription[38;2;248;248;242m: [38;2;230;219;116m"[1;48;2;184;0;0mThe directory [0m[48;2;93;0;30;38;2;230;219;116mto install delta in."[0m[48;2;93;0;30m[0K[0m
-2023-07-18T18:14:27.0896294Z [38;2;22;136;240m[1;38;2;255;0;81m  [0m[38;2;22;136;240m|[1;38;2;3;229;127m14[0m[38;2;22;136;240m|[48;2;0;68;51;38;2;248;248;242m    [38;2;249;38;114mdescription[38;2;248;248;242m: [38;2;230;219;116m"to install delta in."[0m[48;2;0;68;51m[0K[0m
-2023-07-18T18:14:27.0897041Z [38;2;22;136;240m[3;38;2;170;170;170m16[0m[38;2;22;136;240m|[3;38;2;170;170;170m15[0m[38;2;22;136;240m|[38;2;248;248;242m    [38;2;249;38;114mrequired[38;2;248;248;242m: [38;2;190;132;255mfalse[0m
-2023-07-18T18:14:27.0899964Z [38;2;22;136;240m[3;38;2;170;170;170m17[0m[38;2;22;136;240m|[3;38;2;170;170;170m16[0m[38;2;22;136;240m|[38;2;248;248;242m    [38;2;249;38;114mdefault[38;2;248;248;242m: [38;2;230;219;116m""[0m
-2023-07-18T18:14:27.0900863Z [38;2;22;136;240m[3;38;2;170;170;170m18[0m[38;2;22;136;240m|[3;38;2;170;170;170m17[0m[38;2;22;136;240m|[0m
-2023-07-18T18:14:27.0901886Z 
-2023-07-18T18:14:27.0903633Z [38;2;22;136;240m───────────────────────[0m[38;2;22;136;240m┐[0m
-2023-07-18T18:14:27.0905162Z [1;4;38;2;198;59;238m•[0m [1;4;38;2;198;59;238maction.yml[0m:[1;38;2;255;210;26m20[0m:[1;3;38;2;248;248;242m [38;2;249;38;114mruns[38;2;248;248;242m: [0m[38;2;22;136;240m│[0m
-2023-07-18T18:14:27.0906691Z [38;2;22;136;240m───────────────────────[0m[38;2;22;136;240m┴[0m[38;2;22;136;240m────────────────────────────────────────────────────────[0m
-2023-07-18T18:14:27.0908940Z [38;2;22;136;240m[3;38;2;170;170;170m21[0m[38;2;22;136;240m|[3;38;2;170;170;170m20[0m[38;2;22;136;240m|[0m
-2023-07-18T18:14:27.0911539Z [38;2;22;136;240m[3;38;2;170;170;170m22[0m[38;2;22;136;240m|[3;38;2;170;170;170m21[0m[38;2;22;136;240m|[38;2;248;248;242m  [38;2;249;38;114msteps[38;2;248;248;242m:[0m
-2023-07-18T18:14:27.0914429Z [38;2;22;136;240m[3;38;2;170;170;170m23[0m[38;2;22;136;240m|[3;38;2;170;170;170m22[0m[38;2;22;136;240m|[38;2;248;248;242m    - [38;2;249;38;114mname[38;2;248;248;242m: [38;2;230;219;116mInstall delta[0m
-2023-07-18T18:14:27.0925923Z [38;2;22;136;240m[1;38;2;255;0;81m24[0m[38;2;22;136;240m|[1;38;2;3;229;127m  [0m[38;2;22;136;240m|[48;2;93;0;30;38;2;248;248;242m    [1;48;2;184;0;0m  [0m[48;2;93;0;30;38;2;249;38;114mshell[38;2;248;248;242m: [38;2;230;219;116mbash[0m[48;2;93;0;30m[0K[0m
-2023-07-18T18:14:27.0926860Z [38;2;22;136;240m[1;38;2;255;0;81m25[0m[38;2;22;136;240m|[1;38;2;3;229;127m  [0m[38;2;22;136;240m|[48;2;93;0;30;38;2;248;248;242m      [38;2;249;38;114mrun[38;2;248;248;242m: [38;2;230;219;116m"${[1;48;2;184;0;0mGITHUB_ACTION_PATH[0m[48;2;93;0;30;38;2;230;219;116m}/install_delta.sh"[0m[48;2;93;0;30m[0K[0m
-2023-07-18T18:14:27.0927638Z [38;2;22;136;240m[1;38;2;255;0;81m26[0m[38;2;22;136;240m|[1;38;2;3;229;127m  [0m[38;2;22;136;240m|[48;2;93;0;30;38;2;248;248;242m      [38;2;249;38;114menv[38;2;248;248;242m:[0m[48;2;93;0;30m[0K[0m
-2023-07-18T18:14:27.0928424Z [38;2;22;136;240m[1;38;2;255;0;81m27[0m[38;2;22;136;240m|[1;38;2;3;229;127m  [0m[38;2;22;136;240m|[48;2;93;0;30;38;2;248;248;242m        [38;2;249;38;114mGITHUB_TOKEN[38;2;248;248;242m: [38;2;230;219;116m${{ github.token }}[0m[48;2;93;0;30m[0K[0m
-2023-07-18T18:14:27.0929207Z [38;2;22;136;240m[1;38;2;255;0;81m28[0m[38;2;22;136;240m|[1;38;2;3;229;127m  [0m[38;2;22;136;240m|[48;2;93;0;30;38;2;248;248;242m        [1;48;2;184;0;0;38;2;249;38;114mDELTA_ACTION_VERSION[0m[48;2;93;0;30;38;2;248;248;242m: [38;2;230;219;116m${{ inputs.version }}[0m[48;2;93;0;30m[0K[0m
-2023-07-18T18:14:27.0929919Z [38;2;22;136;240m[1;38;2;255;0;81m29[0m[38;2;22;136;240m|[1;38;2;3;229;127m  [0m[38;2;22;136;240m|[48;2;93;0;30;38;2;248;248;242m        [38;2;249;38;114mDELTA_ACTION_HOME[38;2;248;248;242m: [38;2;230;219;116m${{ inputs.delta-home }}[0m[48;2;93;0;30m[0K[0m
-2023-07-18T18:14:27.0930536Z [38;2;22;136;240m[1;38;2;255;0;81m  [0m[38;2;22;136;240m|[1;38;2;3;229;127m23[0m[38;2;22;136;240m|[48;2;0;68;51;38;2;248;248;242m    [38;2;249;38;114mshell[38;2;248;248;242m: [38;2;230;219;116mbash[0m[48;2;0;68;51m[0K[0m
-2023-07-18T18:14:27.0931234Z [38;2;22;136;240m[1;38;2;255;0;81m  [0m[38;2;22;136;240m|[1;38;2;3;229;127m24[0m[38;2;22;136;240m|[48;2;0;68;51;38;2;248;248;242m      [38;2;249;38;114mrun[38;2;248;248;242m: [38;2;230;219;116m"${[1;48;2;0;120;0mGITHUB_PATH[0m[48;2;0;68;51;38;2;230;219;116m}/install_delta.sh"[0m[48;2;0;68;51m[0K[0m
-2023-07-18T18:14:27.0931867Z [38;2;22;136;240m[1;38;2;255;0;81m  [0m[38;2;22;136;240m|[1;38;2;3;229;127m25[0m[38;2;22;136;240m|[48;2;0;68;51;38;2;248;248;242m      [1;48;2;0;120;0m  [0m[48;2;0;68;51;38;2;249;38;114menv[38;2;248;248;242m:[0m[48;2;0;68;51m[0K[0m
-2023-07-18T18:14:27.0932518Z [38;2;22;136;240m[1;38;2;255;0;81m  [0m[38;2;22;136;240m|[1;38;2;3;229;127m26[0m[38;2;22;136;240m|[48;2;0;68;51;38;2;248;248;242m        [1;48;2;0;120;0m  [0m[48;2;0;68;51;38;2;249;38;114mGITHUB_TOKEN[38;2;248;248;242m: [38;2;230;219;116m${{ github.token }}[0m[48;2;0;68;51m[0K[0m
-2023-07-18T18:14:27.0933223Z [38;2;22;136;240m[1;38;2;255;0;81m  [0m[38;2;22;136;240m|[1;38;2;3;229;127m27[0m[38;2;22;136;240m|[48;2;0;68;51;38;2;248;248;242m        [1;48;2;0;120;0m  [38;2;249;38;114mDELTA_ACTION_HOME[0m[48;2;0;68;51;38;2;248;248;242m: [38;2;230;219;116m${{ inputs.version }}[0m[48;2;0;68;51m[0K[0m
-2023-07-18T18:14:27.0934071Z [38;2;22;136;240m[1;38;2;255;0;81m  [0m[38;2;22;136;240m|[1;38;2;3;229;127m28[0m[38;2;22;136;240m|[48;2;0;68;51;38;2;248;248;242m          [38;2;249;38;114mDELTA_ACTION_VERSION[38;2;248;248;242m: [38;2;230;219;116m${{ inputs.configure-git }}[0m[48;2;0;68;51m[0K[0m
-2023-07-18T18:14:27.0990869Z Post job cleanup.
-2023-07-18T18:14:27.2015879Z [command]/usr/bin/git version
-2023-07-18T18:14:27.2062519Z git version 2.41.0
-2023-07-18T18:14:27.2110133Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/5946d6fe-4eaa-423e-a19e-808c3d98bc86/.gitconfig'
-2023-07-18T18:14:27.2123387Z Temporarily overriding HOME='/home/runner/work/_temp/5946d6fe-4eaa-423e-a19e-808c3d98bc86' before making global git config changes
-2023-07-18T18:14:27.2126655Z Adding repository directory to the temporary git global config as a safe directory
-2023-07-18T18:14:27.2134001Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pretty-diff-test/pretty-diff-test
-2023-07-18T18:14:27.2191749Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2023-07-18T18:14:27.2231794Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2023-07-18T18:14:27.2495256Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2023-07-18T18:14:27.2521619Z http.https://github.com/.extraheader
-2023-07-18T18:14:27.2533827Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2023-07-18T18:14:27.2572873Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2023-07-18T18:14:27.3027634Z Cleaning up orphan processes
+2023-07-21T06:12:47.8513090Z Requested labels: ubuntu-latest
+2023-07-21T06:12:47.8513439Z Job defined at: Qwerty-133/pretty-diff-test/.github/workflows/test.yml@refs/heads/main
+2023-07-21T06:12:47.8513614Z Waiting for a runner to pick up this job...
+2023-07-21T06:12:48.0242781Z Job is waiting for a hosted runner to come online.
+2023-07-21T06:12:51.4606264Z Job is about to start running on the hosted runner: GitHub Actions 2 (hosted)
+2023-07-21T06:12:53.8706778Z Current runner version: '2.306.0'
+2023-07-21T06:12:53.8733514Z ##[group]Operating System
+2023-07-21T06:12:53.8733987Z Ubuntu
+2023-07-21T06:12:53.8734364Z 22.04.2
+2023-07-21T06:12:53.8734626Z LTS
+2023-07-21T06:12:53.8734860Z ##[endgroup]
+2023-07-21T06:12:53.8735169Z ##[group]Runner Image
+2023-07-21T06:12:53.8735545Z Image: ubuntu-22.04
+2023-07-21T06:12:53.8735810Z Version: 20230716.1.0
+2023-07-21T06:12:53.8736300Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230716.1/images/linux/Ubuntu2204-Readme.md
+2023-07-21T06:12:53.8736920Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230716.1
+2023-07-21T06:12:53.8737353Z ##[endgroup]
+2023-07-21T06:12:53.8737668Z ##[group]Runner Image Provisioner
+2023-07-21T06:12:53.8737988Z 2.0.238.1
+2023-07-21T06:12:53.8738277Z ##[endgroup]
+2023-07-21T06:12:53.8738864Z ##[group]GITHUB_TOKEN Permissions
+2023-07-21T06:12:53.8739405Z Contents: write
+2023-07-21T06:12:53.8739713Z Metadata: read
+2023-07-21T06:12:53.8740188Z ##[endgroup]
+2023-07-21T06:12:53.8743855Z Secret source: Actions
+2023-07-21T06:12:53.8744273Z Prepare workflow directory
+2023-07-21T06:12:53.9663513Z Prepare all required actions
+2023-07-21T06:12:53.9855494Z Getting action download info
+2023-07-21T06:12:54.1824238Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-07-21T06:12:54.8844727Z Complete job name: test
+2023-07-21T06:12:54.9833214Z ##[group]Run actions/checkout@v3
+2023-07-21T06:12:54.9833686Z with:
+2023-07-21T06:12:54.9834040Z   repository: Qwerty-133/pretty-diff-test
+2023-07-21T06:12:54.9834781Z   token: ***
+2023-07-21T06:12:54.9835071Z   ssh-strict: true
+2023-07-21T06:12:54.9835454Z   persist-credentials: true
+2023-07-21T06:12:54.9836018Z   clean: true
+2023-07-21T06:12:54.9836367Z   sparse-checkout-cone-mode: true
+2023-07-21T06:12:54.9836796Z   fetch-depth: 1
+2023-07-21T06:12:54.9837121Z   lfs: false
+2023-07-21T06:12:54.9837451Z   submodules: false
+2023-07-21T06:12:54.9837760Z   set-safe-directory: true
+2023-07-21T06:12:54.9838182Z ##[endgroup]
+2023-07-21T06:12:55.2209735Z Syncing repository: Qwerty-133/pretty-diff-test
+2023-07-21T06:12:55.2211676Z ##[group]Getting Git version info
+2023-07-21T06:12:55.2212267Z Working directory is '/home/runner/work/pretty-diff-test/pretty-diff-test'
+2023-07-21T06:12:55.2213068Z [command]/usr/bin/git version
+2023-07-21T06:12:55.2315568Z git version 2.41.0
+2023-07-21T06:12:55.2360025Z ##[endgroup]
+2023-07-21T06:12:55.2377499Z Temporarily overriding HOME='/home/runner/work/_temp/5fbcd9ef-caf1-4df1-b80e-7e1ee4cde6b0' before making global git config changes
+2023-07-21T06:12:55.2378204Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-21T06:12:55.2378889Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pretty-diff-test/pretty-diff-test
+2023-07-21T06:12:55.2416499Z Deleting the contents of '/home/runner/work/pretty-diff-test/pretty-diff-test'
+2023-07-21T06:12:55.2422004Z ##[group]Initializing the repository
+2023-07-21T06:12:55.2425954Z [command]/usr/bin/git init /home/runner/work/pretty-diff-test/pretty-diff-test
+2023-07-21T06:12:55.2498769Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-07-21T06:12:55.2499838Z hint: is subject to change. To configure the initial branch name to use in all
+2023-07-21T06:12:55.2500661Z hint: of your new repositories, which will suppress this warning, call:
+2023-07-21T06:12:55.2501095Z hint: 
+2023-07-21T06:12:55.2501568Z hint: 	git config --global init.defaultBranch <name>
+2023-07-21T06:12:55.2501922Z hint: 
+2023-07-21T06:12:55.2502404Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-07-21T06:12:55.2502896Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-07-21T06:12:55.2503266Z hint: 
+2023-07-21T06:12:55.2503615Z hint: 	git branch -m <name>
+2023-07-21T06:12:55.2512763Z Initialized empty Git repository in /home/runner/work/pretty-diff-test/pretty-diff-test/.git/
+2023-07-21T06:12:55.2525333Z [command]/usr/bin/git remote add origin https://github.com/Qwerty-133/pretty-diff-test
+2023-07-21T06:12:55.2565972Z ##[endgroup]
+2023-07-21T06:12:55.2566891Z ##[group]Disabling automatic garbage collection
+2023-07-21T06:12:55.2569517Z [command]/usr/bin/git config --local gc.auto 0
+2023-07-21T06:12:55.2600126Z ##[endgroup]
+2023-07-21T06:12:55.2600948Z ##[group]Setting up auth
+2023-07-21T06:12:55.2606805Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-21T06:12:55.2638322Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-21T06:12:55.2979346Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-21T06:12:55.3010795Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-21T06:12:55.3234992Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-07-21T06:12:55.3273670Z ##[endgroup]
+2023-07-21T06:12:55.3274390Z ##[group]Fetching the repository
+2023-07-21T06:12:55.3285360Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +e8e369763ba0fcced0b100e3ec503009749b871c:refs/remotes/origin/main
+2023-07-21T06:12:55.6578064Z remote: Enumerating objects: 17, done.        
+2023-07-21T06:12:55.6578828Z remote: Counting objects:   5% (1/17)        
+2023-07-21T06:12:55.6579436Z remote: Counting objects:  11% (2/17)        
+2023-07-21T06:12:55.6580149Z remote: Counting objects:  17% (3/17)        
+2023-07-21T06:12:55.6581079Z remote: Counting objects:  23% (4/17)        
+2023-07-21T06:12:55.6581456Z remote: Counting objects:  29% (5/17)        
+2023-07-21T06:12:55.6581787Z remote: Counting objects:  35% (6/17)        
+2023-07-21T06:12:55.6582189Z remote: Counting objects:  41% (7/17)        
+2023-07-21T06:12:55.6582541Z remote: Counting objects:  47% (8/17)        
+2023-07-21T06:12:55.6582863Z remote: Counting objects:  52% (9/17)        
+2023-07-21T06:12:55.6583195Z remote: Counting objects:  58% (10/17)        
+2023-07-21T06:12:55.6583475Z remote: Counting objects:  64% (11/17)        
+2023-07-21T06:12:55.6583822Z remote: Counting objects:  70% (12/17)        
+2023-07-21T06:12:55.6584173Z remote: Counting objects:  76% (13/17)        
+2023-07-21T06:12:55.6584448Z remote: Counting objects:  82% (14/17)        
+2023-07-21T06:12:55.6584768Z remote: Counting objects:  88% (15/17)        
+2023-07-21T06:12:55.6585090Z remote: Counting objects:  94% (16/17)        
+2023-07-21T06:12:55.6585429Z remote: Counting objects: 100% (17/17)        
+2023-07-21T06:12:55.6585739Z remote: Counting objects: 100% (17/17), done.        
+2023-07-21T06:12:55.6586097Z remote: Compressing objects:   8% (1/12)        
+2023-07-21T06:12:55.6586463Z remote: Compressing objects:  16% (2/12)        
+2023-07-21T06:12:55.6586756Z remote: Compressing objects:  25% (3/12)        
+2023-07-21T06:12:55.6587108Z remote: Compressing objects:  33% (4/12)        
+2023-07-21T06:12:55.6587443Z remote: Compressing objects:  41% (5/12)        
+2023-07-21T06:12:55.6587730Z remote: Compressing objects:  50% (6/12)        
+2023-07-21T06:12:55.6588067Z remote: Compressing objects:  58% (7/12)        
+2023-07-21T06:12:55.6588410Z remote: Compressing objects:  66% (8/12)        
+2023-07-21T06:12:55.6588757Z remote: Compressing objects:  75% (9/12)        
+2023-07-21T06:12:55.6589043Z remote: Compressing objects:  83% (10/12)        
+2023-07-21T06:12:55.6589411Z remote: Compressing objects:  91% (11/12)        
+2023-07-21T06:12:55.6589747Z remote: Compressing objects: 100% (12/12)        
+2023-07-21T06:12:55.6590051Z remote: Compressing objects: 100% (12/12), done.        
+2023-07-21T06:12:55.6809633Z remote: Total 17 (delta 3), reused 8 (delta 0), pack-reused 0        
+2023-07-21T06:12:55.6909354Z From https://github.com/Qwerty-133/pretty-diff-test
+2023-07-21T06:12:55.6910537Z  * [new ref]         e8e369763ba0fcced0b100e3ec503009749b871c -> origin/main
+2023-07-21T06:12:55.6955449Z ##[endgroup]
+2023-07-21T06:12:55.6956548Z ##[group]Determining the checkout info
+2023-07-21T06:12:55.6957474Z ##[endgroup]
+2023-07-21T06:12:55.6958165Z ##[group]Checking out the ref
+2023-07-21T06:12:55.6959161Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2023-07-21T06:12:55.7193519Z Switched to a new branch 'main'
+2023-07-21T06:12:55.7241678Z branch 'main' set up to track 'origin/main'.
+2023-07-21T06:12:55.7242695Z ##[endgroup]
+2023-07-21T06:12:55.7243372Z [command]/usr/bin/git log -1 --format='%H'
+2023-07-21T06:12:55.7243714Z 'e8e369763ba0fcced0b100e3ec503009749b871c'
+2023-07-21T06:12:55.7588442Z Prepare all required actions
+2023-07-21T06:12:55.7619527Z ##[group]Run ./
+2023-07-21T06:12:55.7619734Z with:
+2023-07-21T06:12:55.7619906Z   version: latest
+2023-07-21T06:12:55.7620120Z ##[endgroup]
+2023-07-21T06:12:55.7908620Z ##[group]Run ${GITHUB_ACTION_PATH}/install_delta.sh
+2023-07-21T06:12:55.7908997Z [36;1m${GITHUB_ACTION_PATH}/install_delta.sh[0m
+2023-07-21T06:12:55.7968420Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-07-21T06:12:55.7968707Z env:
+2023-07-21T06:12:55.7969233Z   GITHUB_TOKEN: ***
+2023-07-21T06:12:55.7969475Z   DELTA_ACTION_VERSION: latest
+2023-07-21T06:12:55.7969697Z   DELTA_ACTION_HOME: 
+2023-07-21T06:12:55.7969903Z ##[endgroup]
+2023-07-21T06:12:55.8225963Z [94mFetching the latest delta version...
+2023-07-21T06:12:56.1393322Z (B[m[94mDownloading delta v0.16.5 from https://github.com/dandavison/delta/releases/download/0.16.5/delta-0.16.5-x86_64-unknown-linux-gnu.tar.gz to /home/runner/work/_temp...
+2023-07-21T06:12:56.8894547Z (B[m[94mExtracting files...
+2023-07-21T06:12:56.9469094Z (B[m[94mMoving files to /home/runner/.delta...
+2023-07-21T06:12:56.9494265Z (B[m[94mAdding delta to PATH...
+2023-07-21T06:12:56.9495086Z (B[m[94mTesting that the delta executable works...
+2023-07-21T06:12:56.9511422Z (B[m[0mdelta 0.16.5
+2023-07-21T06:12:56.9517330Z [0m[94mDownloading delta themes...
+2023-07-21T06:12:57.1884487Z (B[m[94mConfiguring delta defaults...
+2023-07-21T06:12:57.2111171Z (B[m[94mCreating the pretty-diff alias...
+2023-07-21T06:12:57.2121688Z (B[m[92mSuccessfully installed delta v0.16.5.
+2023-07-21T06:12:57.2122871Z (B[m
+2023-07-21T06:12:57.2172955Z ##[group]Run ./move.sh
+2023-07-21T06:12:57.2173195Z [36;1m./move.sh[0m
+2023-07-21T06:12:57.2228747Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-07-21T06:12:57.2229016Z ##[endgroup]
+2023-07-21T06:12:57.2358931Z ##[group]Run delta --show-config
+2023-07-21T06:12:57.2359194Z [36;1mdelta --show-config[0m
+2023-07-21T06:12:57.2410913Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-07-21T06:12:57.2411175Z ##[endgroup]
+2023-07-21T06:12:57.2575671Z     commit-style                  = [1;3;38;5;220mbold italic 220[0m
+2023-07-21T06:12:57.2576358Z     file-style                    = omit normal
+2023-07-21T06:12:57.2577219Z     hunk-header-style             = [1;3mbold italic syntax[0m
+2023-07-21T06:12:57.2578061Z     minus-style                   = [48;5;52msyntax 52[0m
+2023-07-21T06:12:57.2578930Z     minus-non-emph-style          = [48;5;52msyntax 52[0m
+2023-07-21T06:12:57.2579798Z     minus-emph-style              = [1;48;5;124mbold syntax 124[0m
+2023-07-21T06:12:57.2580713Z     minus-empty-line-marker-style = [48;5;52mnormal 52[0m
+2023-07-21T06:12:57.2581503Z     zero-style                    = syntax
+2023-07-21T06:12:57.2582443Z     plus-style                    = [48;5;236msyntax 236[0m
+2023-07-21T06:12:57.2583251Z     plus-non-emph-style           = [48;5;236msyntax 236[0m
+2023-07-21T06:12:57.2584131Z     plus-emph-style               = [1;48;5;28mbold syntax 28[0m
+2023-07-21T06:12:57.2584998Z     plus-empty-line-marker-style  = [48;5;22mnormal 22[0m
+2023-07-21T06:12:57.2585794Z     grep-file-style               = [35mpurple[0m
+2023-07-21T06:12:57.2586680Z     grep-line-number-style        = [32mgreen[0m
+2023-07-21T06:12:57.2587526Z     whitespace-error-style        = [38;5;53m53[0m
+2023-07-21T06:12:57.2588460Z     blame-palette                 = [48;5;16m#000000[0m [48;5;235m#222222[0m [48;5;238m#444444[0m
+2023-07-21T06:12:57.2589208Z     true-color                    = false
+2023-07-21T06:12:57.2590073Z     file-added-label              = [+]
+2023-07-21T06:12:57.2590922Z     file-modified-label           = [*]
+2023-07-21T06:12:57.2591766Z     file-removed-label            = [-]
+2023-07-21T06:12:57.2592624Z     file-renamed-label            = [->]
+2023-07-21T06:12:57.2593781Z     right-arrow                   = '⟶  '
+2023-07-21T06:12:57.2594271Z     hyperlinks                    = false
+2023-07-21T06:12:57.2595172Z     inspect-raw-lines             = true
+2023-07-21T06:12:57.2596258Z     keep-plus-minus-markers       = false
+2023-07-21T06:12:57.2597082Z     line-numbers                  = true
+2023-07-21T06:12:57.2598031Z     line-numbers-minus-style      = [1;38;5;197mbold 197[0m
+2023-07-21T06:12:57.2598867Z     line-numbers-zero-style       = [3;38;5;248mitalic 248[0m
+2023-07-21T06:12:57.2599719Z     line-numbers-plus-style       = [1;38;5;42mbold 42[0m
+2023-07-21T06:12:57.2600558Z     line-numbers-left-style       = [38;5;33m33[0m
+2023-07-21T06:12:57.2601414Z     line-numbers-right-style      = [38;5;33m33[0m
+2023-07-21T06:12:57.2602248Z     line-numbers-left-format      = '{nm:>1}|'
+2023-07-21T06:12:57.2603083Z     line-numbers-right-format     = '{np:>1}|'
+2023-07-21T06:12:57.2604494Z     max-line-distance             = 0.6
+2023-07-21T06:12:57.2605341Z     max-line-length               = 512
+2023-07-21T06:12:57.2606177Z     diff-stat-align-width         = 48
+2023-07-21T06:12:57.2607018Z     line-fill-method              = spaces
+2023-07-21T06:12:57.2607799Z     navigate                      = false
+2023-07-21T06:12:57.2608661Z     navigate-regex                = 
+2023-07-21T06:12:57.2609464Z     pager                         = none
+2023-07-21T06:12:57.2610297Z     paging                        = never
+2023-07-21T06:12:57.2611177Z     side-by-side                  = false
+2023-07-21T06:12:57.2612042Z     syntax-theme                  = Monokai Extended
+2023-07-21T06:12:57.2612789Z     width                         = 80
+2023-07-21T06:12:57.2613621Z     tabs                          = 8
+2023-07-21T06:12:57.2614501Z     word-diff-regex               = '\w+'
+2023-07-21T06:12:57.2645373Z ##[group]Run cat ~/.gitconfig
+2023-07-21T06:12:57.2645625Z [36;1mcat ~/.gitconfig[0m
+2023-07-21T06:12:57.2697150Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-07-21T06:12:57.2697417Z ##[endgroup]
+2023-07-21T06:12:57.2780371Z [merge]
+2023-07-21T06:12:57.2780874Z 	conflictstyle = diff3
+2023-07-21T06:12:57.2781487Z [include]
+2023-07-21T06:12:57.2782022Z 	path = /home/runner/.delta/themes.gitconfig
+2023-07-21T06:12:57.2782315Z [diff]
+2023-07-21T06:12:57.2782540Z 	colorMoved = default
+2023-07-21T06:12:57.2782753Z [delta]
+2023-07-21T06:12:57.2782994Z 	paging = never
+2023-07-21T06:12:57.2783392Z 	true-color = never
+2023-07-21T06:12:57.2783666Z 	navigate = false
+2023-07-21T06:12:57.2783882Z 	dark = true
+2023-07-21T06:12:57.2784142Z 	hyperlinks = false
+2023-07-21T06:12:57.2784468Z 	features = mantis-shrimp
+2023-07-21T06:12:57.2784799Z 	side-by-side = false
+2023-07-21T06:12:57.2785160Z 	keep-plus-minus-markers = false
+2023-07-21T06:12:57.2804364Z ##[group]Run pretty-diff
+2023-07-21T06:12:57.2804597Z [36;1mpretty-diff[0m
+2023-07-21T06:12:57.2853132Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-07-21T06:12:57.2853386Z ##[endgroup]
+2023-07-21T06:12:57.3040898Z 
+2023-07-21T06:12:57.3041919Z [38;5;33m─────────────[0m[38;5;33m┐[0m
+2023-07-21T06:12:57.3043111Z [1;4;38;5;171m•[0m [1;4;38;5;171mLICENSE[0m:[1;38;5;220m1[0m: [38;5;33m│[0m
+2023-07-21T06:12:57.3043788Z [38;5;33m─────────────[0m[38;5;33m┴[0m[38;5;33m──────────────────────────────────────────────────────────────────[0m
+2023-07-21T06:12:57.3045235Z [38;5;33m[1;38;5;197m1[0m[38;5;33m|[1;38;5;42m [0m[38;5;33m|[48;5;52;38;5;231mMIT License[0m[48;5;52m[0K[0m
+2023-07-21T06:12:57.3045841Z [38;5;33m[1;38;5;197m [0m[38;5;33m|[1;38;5;42m1[0m[38;5;33m|[48;5;236;38;5;231mYES[0m[48;5;236m[0K[0m
+2023-07-21T06:12:57.3046726Z [38;5;33m[3;38;5;248m2[0m[38;5;33m|[3;38;5;248m2[0m[38;5;33m|[0m
+2023-07-21T06:12:57.3047398Z [38;5;33m[3;38;5;248m3[0m[38;5;33m|[3;38;5;248m3[0m[38;5;33m|[38;5;231mCopyright (c) 2023 Qwerty-133[0m
+2023-07-21T06:12:57.3048324Z [38;5;33m[1;38;5;197m4[0m[38;5;33m|[1;38;5;42m [0m[38;5;33m|[0m[48;5;52m[0K[0m
+2023-07-21T06:12:57.3049094Z [38;5;33m[3;38;5;248m5[0m[38;5;33m|[3;38;5;248m4[0m[38;5;33m|[38;5;231mPermission is hereby granted, free of charge, to any person obtaining a copy[0m
+2023-07-21T06:12:57.3050322Z [38;5;33m[3;38;5;248m6[0m[38;5;33m|[3;38;5;248m5[0m[38;5;33m|[38;5;231mof this software and associated documentation files (the "Software"), to deal[0m
+2023-07-21T06:12:57.3051088Z [38;5;33m[3;38;5;248m7[0m[38;5;33m|[3;38;5;248m6[0m[38;5;33m|[38;5;231min the Software without restriction, including without limitation the rights[0m
+2023-07-21T06:12:57.3051855Z 
+2023-07-21T06:12:57.3052288Z [38;5;33m───────────────────────────────────────────────────────────────────────[0m[38;5;33m┐[0m
+2023-07-21T06:12:57.3053367Z [1;4;38;5;171m•[0m [1;4;38;5;171mLICENSE[0m:[1;38;5;220m11[0m:[1;3;38;5;231m furnished to do so, subject to the following conditions: [0m[38;5;33m│[0m
+2023-07-21T06:12:57.3054080Z [38;5;33m───────────────────────────────────────────────────────────────────────[0m[38;5;33m┴[0m[38;5;33m────────[0m
+2023-07-21T06:12:57.3055164Z [38;5;33m[3;38;5;248m12[0m[38;5;33m|[3;38;5;248m11[0m[38;5;33m|[38;5;231mThe above copyright notice and this permission notice shall be included in all[0m
+2023-07-21T06:12:57.3055913Z [38;5;33m[3;38;5;248m13[0m[38;5;33m|[3;38;5;248m12[0m[38;5;33m|[38;5;231mcopies or substantial portions of the Software.[0m
+2023-07-21T06:12:57.3056861Z [38;5;33m[3;38;5;248m14[0m[38;5;33m|[3;38;5;248m13[0m[38;5;33m|[0m
+2023-07-21T06:12:57.3057546Z [38;5;33m[1;38;5;197m15[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231mTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR[0m[48;5;52m[0K[0m
+2023-07-21T06:12:57.3058973Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m14[0m[38;5;33m|[48;5;236;38;5;231mTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS [1;48;5;28mORTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS ORTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS [0m[48;5;236;38;5;231mOR[0m[48;5;236m[0K[0m
+2023-07-21T06:12:57.3059903Z [38;5;33m[3;38;5;248m16[0m[38;5;33m|[3;38;5;248m15[0m[38;5;33m|[38;5;231mIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,[0m
+2023-07-21T06:12:57.3060995Z [38;5;33m[3;38;5;248m17[0m[38;5;33m|[3;38;5;248m16[0m[38;5;33m|[38;5;231mFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE[0m
+2023-07-21T06:12:57.3061728Z [38;5;33m[3;38;5;248m18[0m[38;5;33m|[3;38;5;248m17[0m[38;5;33m|[38;5;231mAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER[0m
+2023-07-21T06:12:57.3063026Z [38;5;33m[3;38;5;248m19[0m[38;5;33m|[3;38;5;248m18[0m[38;5;33m|[38;5;231mLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,[0m
+2023-07-21T06:12:57.3063808Z [38;5;33m[1;38;5;197m20[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231mOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE[0m[48;5;52m[0K[0m
+2023-07-21T06:12:57.3064800Z [38;5;33m[3;38;5;248m21[0m[38;5;33m|[3;38;5;248m19[0m[38;5;33m|[38;5;231mSOFTWARE.[0m
+2023-07-21T06:12:57.3065122Z 
+2023-07-21T06:12:57.3065907Z [38;5;33m───────────────────────────────────[0m[38;5;33m┐[0m
+2023-07-21T06:12:57.3066570Z [1;4;38;5;171m•[0m [1;4;38;5;171maction.yml[0m:[1;38;5;220m3[0m:[1;3;38;5;231m [38;5;203mauthor[38;5;231m: [38;5;186mQwerty-133[38;5;231m [0m[38;5;33m│[0m
+2023-07-21T06:12:57.3067720Z [38;5;33m───────────────────────────────────[0m[38;5;33m┴[0m[38;5;33m────────────────────────────────────────────[0m
+2023-07-21T06:12:57.3068432Z [38;5;33m[3;38;5;248m 3[0m[38;5;33m|[3;38;5;248m 3[0m[38;5;33m|[38;5;203mdescription[38;5;231m: [38;5;186mInstalls delta, and configures git to use it.[0m
+2023-07-21T06:12:57.3069358Z [38;5;33m[3;38;5;248m 4[0m[38;5;33m|[3;38;5;248m 4[0m[38;5;33m|[0m
+2023-07-21T06:12:57.3069909Z [38;5;33m[3;38;5;248m 5[0m[38;5;33m|[3;38;5;248m 5[0m[38;5;33m|[38;5;203mbranding[38;5;231m:[0m
+2023-07-21T06:12:57.3070969Z [38;5;33m[1;38;5;197m 6[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m  [38;5;203micon[38;5;231m: [1;48;5;124;38;5;186mfile-plus[0m[48;5;52m[0K[0m
+2023-07-21T06:12:57.3071608Z [38;5;33m[1;38;5;197m 7[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m  [38;5;203mcolor[38;5;231m: [38;5;186mgreen[0m[48;5;52m[0K[0m
+2023-07-21T06:12:57.3072644Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m 6[0m[38;5;33m|[48;5;236;38;5;231m  [38;5;203micon[38;5;231m:[0m[38;5;53m [0m[48;5;236m[0K[0m
+2023-07-21T06:12:57.3073176Z [38;5;33m[3;38;5;248m 8[0m[38;5;33m|[3;38;5;248m 7[0m[38;5;33m|[0m
+2023-07-21T06:12:57.3074098Z [38;5;33m[3;38;5;248m 9[0m[38;5;33m|[3;38;5;248m 8[0m[38;5;33m|[38;5;203minputs[38;5;231m:[0m
+2023-07-21T06:12:57.3074671Z [38;5;33m[3;38;5;248m10[0m[38;5;33m|[3;38;5;248m 9[0m[38;5;33m|[38;5;231m  [38;5;203mversion[38;5;231m:[0m
+2023-07-21T06:12:57.3075356Z 
+2023-07-21T06:12:57.3075708Z [38;5;33m─────────────────────────[0m[38;5;33m┐[0m
+2023-07-21T06:12:57.3077050Z [1;4;38;5;171m•[0m [1;4;38;5;171maction.yml[0m:[1;38;5;220m11[0m:[1;3;38;5;231m [38;5;203minputs[38;5;231m: [0m[38;5;33m│[0m
+2023-07-21T06:12:57.3077711Z [38;5;33m─────────────────────────[0m[38;5;33m┴[0m[38;5;33m──────────────────────────────────────────────────────[0m
+2023-07-21T06:12:57.3078693Z [38;5;33m[3;38;5;248m12[0m[38;5;33m|[3;38;5;248m11[0m[38;5;33m|[38;5;231m    [38;5;203mrequired[38;5;231m: [38;5;141mtrue[0m
+2023-07-21T06:12:57.3079374Z [38;5;33m[3;38;5;248m13[0m[38;5;33m|[3;38;5;248m12[0m[38;5;33m|[38;5;231m    [38;5;203mdefault[38;5;231m: [38;5;186m"latest"[0m
+2023-07-21T06:12:57.3080390Z [38;5;33m[3;38;5;248m14[0m[38;5;33m|[3;38;5;248m13[0m[38;5;33m|[38;5;231m  [38;5;203mdelta-home[38;5;231m:[0m
+2023-07-21T06:12:57.3081134Z [38;5;33m[1;38;5;197m15[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m    [38;5;203mdescription[38;5;231m: [38;5;186m"[1;48;5;124mThe directory [0m[48;5;52;38;5;186mto install delta in."[0m[48;5;52m[0K[0m
+2023-07-21T06:12:57.3082228Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m14[0m[38;5;33m|[48;5;236;38;5;231m    [38;5;203mdescription[38;5;231m: [38;5;186m"to install delta in."[0m[48;5;236m[0K[0m
+2023-07-21T06:12:57.3082897Z [38;5;33m[3;38;5;248m16[0m[38;5;33m|[3;38;5;248m15[0m[38;5;33m|[38;5;231m    [38;5;203mrequired[38;5;231m: [38;5;141mfalse[0m
+2023-07-21T06:12:57.3083868Z [38;5;33m[3;38;5;248m17[0m[38;5;33m|[3;38;5;248m16[0m[38;5;33m|[38;5;231m    [38;5;203mdefault[38;5;231m: [38;5;186m""[0m
+2023-07-21T06:12:57.3084938Z [38;5;33m[3;38;5;248m18[0m[38;5;33m|[3;38;5;248m17[0m[38;5;33m|[0m
+2023-07-21T06:12:57.3085866Z 
+2023-07-21T06:12:57.3086293Z [38;5;33m───────────────────────[0m[38;5;33m┐[0m
+2023-07-21T06:12:57.3087650Z [1;4;38;5;171m•[0m [1;4;38;5;171maction.yml[0m:[1;38;5;220m20[0m:[1;3;38;5;231m [38;5;203mruns[38;5;231m: [0m[38;5;33m│[0m
+2023-07-21T06:12:57.3088135Z [38;5;33m───────────────────────[0m[38;5;33m┴[0m[38;5;33m────────────────────────────────────────────────────────[0m
+2023-07-21T06:12:57.3088501Z [38;5;33m[3;38;5;248m21[0m[38;5;33m|[3;38;5;248m20[0m[38;5;33m|[0m
+2023-07-21T06:12:57.3088896Z [38;5;33m[3;38;5;248m22[0m[38;5;33m|[3;38;5;248m21[0m[38;5;33m|[38;5;231m  [38;5;203msteps[38;5;231m:[0m
+2023-07-21T06:12:57.3089532Z [38;5;33m[3;38;5;248m23[0m[38;5;33m|[3;38;5;248m22[0m[38;5;33m|[38;5;231m    - [38;5;203mname[38;5;231m: [38;5;186mInstall delta[0m
+2023-07-21T06:12:57.3090050Z [38;5;33m[1;38;5;197m24[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m    [1;48;5;124m  [0m[48;5;52;38;5;203mshell[38;5;231m: [38;5;186mbash[0m[48;5;52m[0K[0m
+2023-07-21T06:12:57.3090620Z [38;5;33m[1;38;5;197m25[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m      [38;5;203mrun[38;5;231m: [38;5;186m"${[1;48;5;124mGITHUB_ACTION_PATH[0m[48;5;52;38;5;186m}/install_delta.sh"[0m[48;5;52m[0K[0m
+2023-07-21T06:12:57.3091119Z [38;5;33m[1;38;5;197m26[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m      [38;5;203menv[38;5;231m:[0m[48;5;52m[0K[0m
+2023-07-21T06:12:57.3091617Z [38;5;33m[1;38;5;197m27[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m        [38;5;203mGITHUB_TOKEN[38;5;231m: [38;5;186m${{ github.token }}[0m[48;5;52m[0K[0m
+2023-07-21T06:12:57.3092218Z [38;5;33m[1;38;5;197m28[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m        [1;48;5;124;38;5;203mDELTA_ACTION_VERSION[0m[48;5;52;38;5;231m: [38;5;186m${{ inputs.version }}[0m[48;5;52m[0K[0m
+2023-07-21T06:12:57.3092798Z [38;5;33m[1;38;5;197m29[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m        [38;5;203mDELTA_ACTION_HOME[38;5;231m: [38;5;186m${{ inputs.delta-home }}[0m[48;5;52m[0K[0m
+2023-07-21T06:12:57.3093296Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m23[0m[38;5;33m|[48;5;236;38;5;231m    [38;5;203mshell[38;5;231m: [38;5;186mbash[0m[48;5;236m[0K[0m
+2023-07-21T06:12:57.3093852Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m24[0m[38;5;33m|[48;5;236;38;5;231m      [38;5;203mrun[38;5;231m: [38;5;186m"${[1;48;5;28mGITHUB_PATH[0m[48;5;236;38;5;186m}/install_delta.sh"[0m[48;5;236m[0K[0m
+2023-07-21T06:12:57.3094378Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m25[0m[38;5;33m|[48;5;236;38;5;231m      [1;48;5;28m  [0m[48;5;236;38;5;203menv[38;5;231m:[0m[48;5;236m[0K[0m
+2023-07-21T06:12:57.3099143Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m26[0m[38;5;33m|[48;5;236;38;5;231m        [1;48;5;28m  [0m[48;5;236;38;5;203mGITHUB_TOKEN[38;5;231m: [38;5;186m${{ github.token }}[0m[48;5;236m[0K[0m
+2023-07-21T06:12:57.3099849Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m27[0m[38;5;33m|[48;5;236;38;5;231m        [1;48;5;28m  [38;5;203mDELTA_ACTION_HOME[0m[48;5;236;38;5;231m: [38;5;186m${{ inputs.version }}[0m[48;5;236m[0K[0m
+2023-07-21T06:12:57.3100428Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m28[0m[38;5;33m|[48;5;236;38;5;231m          [38;5;203mDELTA_ACTION_VERSION[38;5;231m: [38;5;186m${{ inputs.configure-git }}[0m[48;5;236m[0K[0m
+2023-07-21T06:12:57.3119787Z ##[group]Run pretty-diff
+2023-07-21T06:12:57.3120029Z [36;1mpretty-diff[0m
+2023-07-21T06:12:57.3175090Z shell: /usr/bin/pwsh -command ". '{0}'"
+2023-07-21T06:12:57.3175330Z ##[endgroup]
+2023-07-21T06:13:02.7892405Z 
+2023-07-21T06:13:02.7893377Z [38;5;33m─────────────[0m[38;5;33m┐[0m
+2023-07-21T06:13:02.7894151Z [1;4;38;5;171m•[0m [1;4;38;5;171mLICENSE[0m:[1;38;5;220m1[0m: [38;5;33m│[0m
+2023-07-21T06:13:02.7894854Z [38;5;33m─────────────[0m[38;5;33m┴[0m[38;5;33m──────────────────────────────────────────────────────────────────[0m
+2023-07-21T06:13:02.7902333Z [38;5;33m[1;38;5;197m1[0m[38;5;33m|[1;38;5;42m [0m[38;5;33m|[48;5;52;38;5;231mMIT License[0m[48;5;52m[0K[0m
+2023-07-21T06:13:02.7902795Z [38;5;33m[1;38;5;197m [0m[38;5;33m|[1;38;5;42m1[0m[38;5;33m|[48;5;236;38;5;231mYES[0m[48;5;236m[0K[0m
+2023-07-21T06:13:02.7903153Z [38;5;33m[3;38;5;248m2[0m[38;5;33m|[3;38;5;248m2[0m[38;5;33m|[0m
+2023-07-21T06:13:02.7905979Z [38;5;33m[3;38;5;248m3[0m[38;5;33m|[3;38;5;248m3[0m[38;5;33m|[38;5;231mCopyright (c) 2023 Qwerty-133[0m
+2023-07-21T06:13:02.7909102Z [38;5;33m[1;38;5;197m4[0m[38;5;33m|[1;38;5;42m [0m[38;5;33m|[0m[48;5;52m[0K[0m
+2023-07-21T06:13:02.7909794Z [38;5;33m[3;38;5;248m5[0m[38;5;33m|[3;38;5;248m4[0m[38;5;33m|[38;5;231mPermission is hereby granted, free of charge, to any person obtaining a copy[0m
+2023-07-21T06:13:02.7912975Z [38;5;33m[3;38;5;248m6[0m[38;5;33m|[3;38;5;248m5[0m[38;5;33m|[38;5;231mof this software and associated documentation files (the "Software"), to deal[0m
+2023-07-21T06:13:02.7918111Z [38;5;33m[3;38;5;248m7[0m[38;5;33m|[3;38;5;248m6[0m[38;5;33m|[38;5;231min the Software without restriction, including without limitation the rights[0m
+2023-07-21T06:13:02.7921756Z 
+2023-07-21T06:13:02.7924714Z [38;5;33m───────────────────────────────────────────────────────────────────────[0m[38;5;33m┐[0m
+2023-07-21T06:13:02.7925253Z [1;4;38;5;171m•[0m [1;4;38;5;171mLICENSE[0m:[1;38;5;220m11[0m:[1;3;38;5;231m furnished to do so, subject to the following conditions: [0m[38;5;33m│[0m
+2023-07-21T06:13:02.7925787Z [38;5;33m───────────────────────────────────────────────────────────────────────[0m[38;5;33m┴[0m[38;5;33m────────[0m
+2023-07-21T06:13:02.7927761Z [38;5;33m[3;38;5;248m12[0m[38;5;33m|[3;38;5;248m11[0m[38;5;33m|[38;5;231mThe above copyright notice and this permission notice shall be included in all[0m
+2023-07-21T06:13:02.7930802Z [38;5;33m[3;38;5;248m13[0m[38;5;33m|[3;38;5;248m12[0m[38;5;33m|[38;5;231mcopies or substantial portions of the Software.[0m
+2023-07-21T06:13:02.7931201Z [38;5;33m[3;38;5;248m14[0m[38;5;33m|[3;38;5;248m13[0m[38;5;33m|[0m
+2023-07-21T06:13:02.7934139Z [38;5;33m[1;38;5;197m15[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231mTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR[0m[48;5;52m[0K[0m
+2023-07-21T06:13:02.7935291Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m14[0m[38;5;33m|[48;5;236;38;5;231mTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS [1;48;5;28mORTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS ORTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS [0m[48;5;236;38;5;231mOR[0m[48;5;236m[0K[0m
+2023-07-21T06:13:02.7936276Z [38;5;33m[3;38;5;248m16[0m[38;5;33m|[3;38;5;248m15[0m[38;5;33m|[38;5;231mIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,[0m
+2023-07-21T06:13:02.7936862Z [38;5;33m[3;38;5;248m17[0m[38;5;33m|[3;38;5;248m16[0m[38;5;33m|[38;5;231mFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE[0m
+2023-07-21T06:13:02.7937418Z [38;5;33m[3;38;5;248m18[0m[38;5;33m|[3;38;5;248m17[0m[38;5;33m|[38;5;231mAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER[0m
+2023-07-21T06:13:02.8021965Z [38;5;33m[3;38;5;248m19[0m[38;5;33m|[3;38;5;248m18[0m[38;5;33m|[38;5;231mLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,[0m
+2023-07-21T06:13:02.8023616Z [38;5;33m[1;38;5;197m20[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231mOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE[0m[48;5;52m[0K[0m
+2023-07-21T06:13:02.8024391Z [38;5;33m[3;38;5;248m21[0m[38;5;33m|[3;38;5;248m19[0m[38;5;33m|[38;5;231mSOFTWARE.[0m
+2023-07-21T06:13:02.8025539Z 
+2023-07-21T06:13:02.8025995Z [38;5;33m───────────────────────────────────[0m[38;5;33m┐[0m
+2023-07-21T06:13:02.8027399Z [1;4;38;5;171m•[0m [1;4;38;5;171maction.yml[0m:[1;38;5;220m3[0m:[1;3;38;5;231m [38;5;203mauthor[38;5;231m: [38;5;186mQwerty-133[38;5;231m [0m[38;5;33m│[0m
+2023-07-21T06:13:02.8028013Z [38;5;33m───────────────────────────────────[0m[38;5;33m┴[0m[38;5;33m────────────────────────────────────────────[0m
+2023-07-21T06:13:02.8029443Z [38;5;33m[3;38;5;248m 3[0m[38;5;33m|[3;38;5;248m 3[0m[38;5;33m|[38;5;203mdescription[38;5;231m: [38;5;186mInstalls delta, and configures git to use it.[0m
+2023-07-21T06:13:02.8029961Z [38;5;33m[3;38;5;248m 4[0m[38;5;33m|[3;38;5;248m 4[0m[38;5;33m|[0m
+2023-07-21T06:13:02.8031243Z [38;5;33m[3;38;5;248m 5[0m[38;5;33m|[3;38;5;248m 5[0m[38;5;33m|[38;5;203mbranding[38;5;231m:[0m
+2023-07-21T06:13:02.8031838Z [38;5;33m[1;38;5;197m 6[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m  [38;5;203micon[38;5;231m: [1;48;5;124;38;5;186mfile-plus[0m[48;5;52m[0K[0m
+2023-07-21T06:13:02.8033213Z [38;5;33m[1;38;5;197m 7[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m  [38;5;203mcolor[38;5;231m: [38;5;186mgreen[0m[48;5;52m[0K[0m
+2023-07-21T06:13:02.8033776Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m 6[0m[38;5;33m|[48;5;236;38;5;231m  [38;5;203micon[38;5;231m:[0m[38;5;53m [0m[48;5;236m[0K[0m
+2023-07-21T06:13:02.8035019Z [38;5;33m[3;38;5;248m 8[0m[38;5;33m|[3;38;5;248m 7[0m[38;5;33m|[0m
+2023-07-21T06:13:02.8035496Z [38;5;33m[3;38;5;248m 9[0m[38;5;33m|[3;38;5;248m 8[0m[38;5;33m|[38;5;203minputs[38;5;231m:[0m
+2023-07-21T06:13:02.8036929Z [38;5;33m[3;38;5;248m10[0m[38;5;33m|[3;38;5;248m 9[0m[38;5;33m|[38;5;231m  [38;5;203mversion[38;5;231m:[0m
+2023-07-21T06:13:02.8037268Z 
+2023-07-21T06:13:02.8038351Z [38;5;33m─────────────────────────[0m[38;5;33m┐[0m
+2023-07-21T06:13:02.8038890Z [1;4;38;5;171m•[0m [1;4;38;5;171maction.yml[0m:[1;38;5;220m11[0m:[1;3;38;5;231m [38;5;203minputs[38;5;231m: [0m[38;5;33m│[0m
+2023-07-21T06:13:02.8040277Z [38;5;33m─────────────────────────[0m[38;5;33m┴[0m[38;5;33m──────────────────────────────────────────────────────[0m
+2023-07-21T06:13:02.8040883Z [38;5;33m[3;38;5;248m12[0m[38;5;33m|[3;38;5;248m11[0m[38;5;33m|[38;5;231m    [38;5;203mrequired[38;5;231m: [38;5;141mtrue[0m
+2023-07-21T06:13:02.8042230Z [38;5;33m[3;38;5;248m13[0m[38;5;33m|[3;38;5;248m12[0m[38;5;33m|[38;5;231m    [38;5;203mdefault[38;5;231m: [38;5;186m"latest"[0m
+2023-07-21T06:13:02.8042782Z [38;5;33m[3;38;5;248m14[0m[38;5;33m|[3;38;5;248m13[0m[38;5;33m|[38;5;231m  [38;5;203mdelta-home[38;5;231m:[0m
+2023-07-21T06:13:02.8043708Z [38;5;33m[1;38;5;197m15[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m    [38;5;203mdescription[38;5;231m: [38;5;186m"[1;48;5;124mThe directory [0m[48;5;52;38;5;186mto install delta in."[0m[48;5;52m[0K[0m
+2023-07-21T06:13:02.8045096Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m14[0m[38;5;33m|[48;5;236;38;5;231m    [38;5;203mdescription[38;5;231m: [38;5;186m"to install delta in."[0m[48;5;236m[0K[0m
+2023-07-21T06:13:02.8045725Z [38;5;33m[3;38;5;248m16[0m[38;5;33m|[3;38;5;248m15[0m[38;5;33m|[38;5;231m    [38;5;203mrequired[38;5;231m: [38;5;141mfalse[0m
+2023-07-21T06:13:02.8047779Z [38;5;33m[3;38;5;248m17[0m[38;5;33m|[3;38;5;248m16[0m[38;5;33m|[38;5;231m    [38;5;203mdefault[38;5;231m: [38;5;186m""[0m
+2023-07-21T06:13:02.8048229Z [38;5;33m[3;38;5;248m18[0m[38;5;33m|[3;38;5;248m17[0m[38;5;33m|[0m
+2023-07-21T06:13:02.8048700Z 
+2023-07-21T06:13:02.8049693Z [38;5;33m───────────────────────[0m[38;5;33m┐[0m
+2023-07-21T06:13:02.8050299Z [1;4;38;5;171m•[0m [1;4;38;5;171maction.yml[0m:[1;38;5;220m20[0m:[1;3;38;5;231m [38;5;203mruns[38;5;231m: [0m[38;5;33m│[0m
+2023-07-21T06:13:02.8052378Z [38;5;33m───────────────────────[0m[38;5;33m┴[0m[38;5;33m────────────────────────────────────────────────────────[0m
+2023-07-21T06:13:02.8052855Z [38;5;33m[3;38;5;248m21[0m[38;5;33m|[3;38;5;248m20[0m[38;5;33m|[0m
+2023-07-21T06:13:02.8053464Z [38;5;33m[3;38;5;248m22[0m[38;5;33m|[3;38;5;248m21[0m[38;5;33m|[38;5;231m  [38;5;203msteps[38;5;231m:[0m
+2023-07-21T06:13:02.8054691Z [38;5;33m[3;38;5;248m23[0m[38;5;33m|[3;38;5;248m22[0m[38;5;33m|[38;5;231m    - [38;5;203mname[38;5;231m: [38;5;186mInstall delta[0m
+2023-07-21T06:13:02.8055377Z [38;5;33m[1;38;5;197m24[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m    [1;48;5;124m  [0m[48;5;52;38;5;203mshell[38;5;231m: [38;5;186mbash[0m[48;5;52m[0K[0m
+2023-07-21T06:13:02.8056746Z [38;5;33m[1;38;5;197m25[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m      [38;5;203mrun[38;5;231m: [38;5;186m"${[1;48;5;124mGITHUB_ACTION_PATH[0m[48;5;52;38;5;186m}/install_delta.sh"[0m[48;5;52m[0K[0m
+2023-07-21T06:13:02.8057927Z [38;5;33m[1;38;5;197m26[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m      [38;5;203menv[38;5;231m:[0m[48;5;52m[0K[0m
+2023-07-21T06:13:02.8060429Z [38;5;33m[1;38;5;197m27[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m        [38;5;203mGITHUB_TOKEN[38;5;231m: [38;5;186m${{ github.token }}[0m[48;5;52m[0K[0m
+2023-07-21T06:13:02.8061145Z [38;5;33m[1;38;5;197m28[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m        [1;48;5;124;38;5;203mDELTA_ACTION_VERSION[0m[48;5;52;38;5;231m: [38;5;186m${{ inputs.version }}[0m[48;5;52m[0K[0m
+2023-07-21T06:13:02.8061890Z [38;5;33m[1;38;5;197m29[0m[38;5;33m|[1;38;5;42m  [0m[38;5;33m|[48;5;52;38;5;231m        [38;5;203mDELTA_ACTION_HOME[38;5;231m: [38;5;186m${{ inputs.delta-home }}[0m[48;5;52m[0K[0m
+2023-07-21T06:13:02.8062822Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m23[0m[38;5;33m|[48;5;236;38;5;231m    [38;5;203mshell[38;5;231m: [38;5;186mbash[0m[48;5;236m[0K[0m
+2023-07-21T06:13:02.8063436Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m24[0m[38;5;33m|[48;5;236;38;5;231m      [38;5;203mrun[38;5;231m: [38;5;186m"${[1;48;5;28mGITHUB_PATH[0m[48;5;236;38;5;186m}/install_delta.sh"[0m[48;5;236m[0K[0m
+2023-07-21T06:13:02.8063978Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m25[0m[38;5;33m|[48;5;236;38;5;231m      [1;48;5;28m  [0m[48;5;236;38;5;203menv[38;5;231m:[0m[48;5;236m[0K[0m
+2023-07-21T06:13:02.8064535Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m26[0m[38;5;33m|[48;5;236;38;5;231m        [1;48;5;28m  [0m[48;5;236;38;5;203mGITHUB_TOKEN[38;5;231m: [38;5;186m${{ github.token }}[0m[48;5;236m[0K[0m
+2023-07-21T06:13:02.8065384Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m27[0m[38;5;33m|[48;5;236;38;5;231m        [1;48;5;28m  [38;5;203mDELTA_ACTION_HOME[0m[48;5;236;38;5;231m: [38;5;186m${{ inputs.version }}[0m[48;5;236m[0K[0m
+2023-07-21T06:13:02.8066086Z [38;5;33m[1;38;5;197m  [0m[38;5;33m|[1;38;5;42m28[0m[38;5;33m|[48;5;236;38;5;231m          [38;5;203mDELTA_ACTION_VERSION[38;5;231m: [38;5;186m${{ inputs.configure-git }}[0m[48;5;236m[0K[0m
+2023-07-21T06:13:05.6739681Z Post job cleanup.
+2023-07-21T06:13:05.7753562Z [command]/usr/bin/git version
+2023-07-21T06:13:05.7798618Z git version 2.41.0
+2023-07-21T06:13:05.7844673Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/0691872c-fead-48f2-ac7b-5b8c70eccfd7/.gitconfig'
+2023-07-21T06:13:05.7857849Z Temporarily overriding HOME='/home/runner/work/_temp/0691872c-fead-48f2-ac7b-5b8c70eccfd7' before making global git config changes
+2023-07-21T06:13:05.7860668Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-21T06:13:05.7868053Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pretty-diff-test/pretty-diff-test
+2023-07-21T06:13:05.7916125Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-21T06:13:05.7955090Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-21T06:13:05.8227145Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-21T06:13:05.8245235Z http.https://github.com/.extraheader
+2023-07-21T06:13:05.8259605Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-07-21T06:13:05.8301539Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-21T06:13:05.8762554Z Cleaning up orphan processes
