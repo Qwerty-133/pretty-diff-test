@@ -12,19 +12,17 @@ jobs:
       - uses: actions/checkout@v3
       - run: |
             text = """
-            [48;5;52;38;5;231m    [1;48;5;124m  [0m[48;5;52;38;5;203mshell[38;5;231m: [38;5;186mbash[0m[48;5;52m[0K[0m
-            [48;5;52;38;5;231m      [38;5;203mrun[38;5;231m: [38;5;186m"${[1;48;5;124mGITHUB_ACTION_PATH[0m[48;5;52;38;5;186m}/install_delta.sh"[0m[48;5;52m[0K[0m
-            [48;5;52;38;5;231m      [38;5;203menv[38;5;231m:[0m[48;5;52m[0K[0m
-            [48;5;52;38;5;231m        [38;5;203mGITHUB_TOKEN[38;5;231m: [38;5;186m${{ github.token }}[0m[48;5;52m[0K[0m
-            [48;5;52;38;5;231m        [1;48;5;124;38;5;203mDELTA_ACTION_VERSION[0m[48;5;52;38;5;231m: [38;5;186m${{ inputs.version }}[0m[48;5;52m[0K[0m
-            [48;5;52;38;5;231m        [38;5;203mDELTA_ACTION_HOME[38;5;231m: [38;5;186m${{ inputs.delta-home }}[0m[48;5;52m[0K[0m
+            [38;5;203mdescription[38;5;231m: [38;5;186mInstalls delta, and configures git to use it.[0m
+            [0m
+            [38;5;203mbranding[38;5;231m:[0m
+            [48;5;52;38;5;231m  [38;5;203micon[38;5;231m: [1;48;5;124;38;5;186mfile-plus[0m[48;5;52m[0K[0m
+            [48;5;52;38;5;231m  [38;5;203mcolor[38;5;231m: [38;5;186mgreen[0m[48;5;52m[0K[0m
 
-                [1;48;5;124m  [0m[48;5;52;38;5;203mshell[38;5;231m: [38;5;186mbash[0m[48;5;52m[0K[0m
-                  [38;5;203mrun[38;5;231m: [38;5;186m"${[1;48;5;124mGITHUB_ACTION_PATH[0m[48;5;52;38;5;186m}/install_delta.sh"[0m[48;5;52m[0K[0m
-                  [38;5;203menv[38;5;231m:[0m[48;5;52m[0K[0m
-                    [38;5;203mGITHUB_TOKEN[38;5;231m: [38;5;186m${{ github.token }}[0m[48;5;52m[0K[0m
-                    [1;48;5;124;38;5;203mDELTA_ACTION_VERSION[0m[48;5;52;38;5;231m: [38;5;186m${{ inputs.version }}[0m[48;5;52m[0K[0m
-                    [38;5;203mDELTA_ACTION_HOME[38;5;231m: [38;5;186m${{ inputs.delta-home }}[0m[48;5;52m[0K[0m
+            [38;5;203mdescription[38;5;231m: [38;5;186mInstalls delta, and configures git to use it.[0m
+            [0m
+            [38;5;203mbranding[38;5;231m:[0m
+              [38;5;203micon[38;5;231m: [1;48;5;124;38;5;186mfile-plus[0m[48;5;52m[0K[0m
+              [38;5;203mcolor[38;5;231m: [38;5;186mgreen[0m[48;5;52m[0K[0m
             """
             print(text)
         shell: python {0}
