@@ -10,8 +10,4 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - shell: python {0}
-        run: |
-          text = """
-          """
-          print(text)
+      - run: cat temp.txt
