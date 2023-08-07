@@ -1,5 +1,5 @@
 #!/bin/bash
-# Installs delta from it's GitHub releases, on Github Action runners.
+# Installs delta from it's GitHub releases on Github Action runners.
 # Repository: https://github.com/Qwerty-133/pretty-diff
 
 set -euo pipefail
@@ -18,6 +18,8 @@ readonly DELTA_HOME="${DELTA_ACTION_HOME:-${HOME}/.delta}"
 if [[ -e "${DELTA_HOME}" ]]; then
   rm -rf "${DELTA_HOME}"
 fi
+mkdir -p "${DELTA_HOME}"  # --parents
+
 readonly HEADER="Authorization: Bearer ${GITHUB_TOKEN}"
 read -r -d '' ALIAS_SCRIPT <<EOM || true
 #!/bin/bash
@@ -37,6 +39,9 @@ readonly DELTA_DEFAULTS=(
   'delta.features: mantis-shrimp'
   'delta.side-by-side: false'
   'delta.keep-plus-minus-markers: false'
+  'delta.blame-palette = "#101010 #200020 #002800 #000028 #202000 #280000 #002020 #002800 #202020"'
+  'delta.plus-style: syntax'
+  'delta.minus-style: syntax'
 )
 
 # Print a message to STDOUT in the specified colour.
@@ -49,7 +54,7 @@ print() {
 # Returns: The exit code of the command that failed.
 # shellcheck disable=SC2317
 traphandler() {
-  local -r status=$?
+  local -r status="$?"
   local -r command="${BASH_COMMAND}"
   local -r ln="${BASH_LINENO[0]}"
   print "${RED}" 'An unexpected error occurred:\n' 1>&2
@@ -119,7 +124,7 @@ readonly theme_url='https://raw.githubusercontent.com/dandavison/delta/master/th
 curl "${theme_url}" --silent --fail --location --header "${HEADER}" --output \
  "${DELTA_HOME}/themes.gitconfig"
 
-print "${CYAN}" 'Configuring delta defaults...\n'
+print "${CYAN}" 'Configuring delta settings...\n'
 for default in "${DELTA_DEFAULTS[@]}"; do
   key="${default%%:*}"
   value="${default#*: }"

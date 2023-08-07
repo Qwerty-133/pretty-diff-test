@@ -1,28 +1,71 @@
-name: Test the action
+name: Run tests
 
 on:
   push:
+    paths:
+      - ".github/workflows/test.yml"
+      - "tests/**"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 defaults:
   run:
     shell: bash
 
 jobs:
-  test:
-    timeout-minutes: 20
-    runs-on: ubuntu-latest
+  test-basic:
+    timeout-minutes: 10
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-2022, windows-2019, ubuntu-22.04, ubuntu-20.04, macos-13, macos-12, macos-11]
 
     steps:
       - uses: actions/checkout@v3
-      - name: Basic Installation
-        uses: ./
-      - run: ./move.sh
-      - run: delta --show-config
+      - uses: ./
+      - run: tests/apply-changes.sh
       - run: cat ~/.gitconfig
-      - run: pretty-diff
-      - run: pretty-diff
+      - run: delta --show-config
+  
+      - name: Diff (bash)
+        run: pretty-diff
+
+      - name: Diff (pwsh)
         shell: pwsh
+        run: pretty-diff
+
+      - name: Diff (powershell)
+        if: ${{ runner.os == 'Windows' }}
+        shell: powershell
+        run: pretty-diff
+
+  test-custom-installation:
+    timeout-minutes: 10
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-2022, windows-2019, ubuntu-22.04, ubuntu-20.04, macos-13, macos-12, macos-11]
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
+        with:
+          version: 0.16.4
+          delta-home: ~/
+      - run: tests/apply-changes.sh
+      - run: cat ~/.gitconfig
+      - run: delta --show-config
+  
+      - name: Diff (bash)
+        run: pretty-diff
+
+      - name: Diff (pwsh)
+        shell: pwsh
+        run: pretty-diff
+
+      - name: Diff (powershell)
+        if: ${{ runner.os == 'Windows' }}
+        shell: powershell
+        run: pretty-diff

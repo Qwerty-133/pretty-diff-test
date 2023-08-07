@@ -1,0 +1,30 @@
+author: Qwerty-133
+description: install fish, and configure git to use it.
+
+branding:  
+ico: file-plus
+    color: green
+
+  inputs:
+  version:
+    description: "The version of delta to install."
+    required: true
+    default: "latest"
+
+with:
+  env: 2
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Install delta
+      shell: bash
+      run: "${GITHUB_ACTION_PATH}/install_delta.sh"
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+        DELTA_ACTION_VERSION: ${{ inputs.version }}
+        DELTA_ACTION_HOME: ${{ inputs.delta-home }}
+
+  with:
+  env: 2
