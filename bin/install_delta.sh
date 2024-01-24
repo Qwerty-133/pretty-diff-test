@@ -84,7 +84,7 @@ asset_map=(
   [MacOS_ARM64]="delta-${tag}-aarch64-apple-darwin.tar.gz"
 )
 declare -r asset_map
-
+echo "RUNNER OS: ${RUNNER_OS}, RUNNER ARCH: ${RUNNER_ARCH}"
 readonly asset="${asset_map["${RUNNER_OS}_${RUNNER_ARCH}"]}"
 if [[ -z "${asset}" ]]; then
   print "${RED}" "Delta cannot be installed on ${RUNNER_OS} ${RUNNER_ARCH}\n" 1>&2
