@@ -128,7 +128,7 @@ for default in "${DELTA_DEFAULTS[@]}"; do
   git config --global "${key}" "${value}"
 done
 
-if [[ "${ENABLE_HYPERLINKS}" == 'true' ]]; then
+if [[ "${DELTA_ACTION_ENABLE_HYPERLINKS}" == 'true' ]]; then
   print "${CYAN}" 'Creating the pretty-diff alias (hyperlinks enabled)...\n'
   cp "${GITHUB_ACTION_PATH}/bin/pretty_diff_hyperlinks.sh" "${DELTA_HOME}/pretty-diff"
 else

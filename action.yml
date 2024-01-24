@@ -27,4 +27,4 @@ runs:
         GITHUB_TOKEN: ${{ github.token }}
         DELTA_ACTION_VERSION: ${{ inputs.version }}
         DELTA_ACTION_HOME: ${{ inputs.delta-home }}
-        DELTA_ENABLE_HYPERLINKS: ${{ inputs.enable-hyperlinks }}
+        DELTA_ACTION_ENABLE_HYPERLINKS: ${{ inputs.enable-hyperlinks }}
