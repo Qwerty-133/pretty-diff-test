@@ -68,6 +68,11 @@ jobs:
         shell: pwsh
         run: pretty-diff
 
+      - name: TDiff (powershell)
+        if: ${{ runner.os == 'Windows' }}
+        shell: powershell
+        run: git diff
+
       - name: Diff (powershell)
         if: ${{ runner.os == 'Windows' }}
         shell: powershell

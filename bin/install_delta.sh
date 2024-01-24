@@ -80,8 +80,8 @@ asset_map=(
   [Linux_ARM64]="delta-${tag}-aarch64-unknown-linux-musl.tar.gz"
   [Linux_ARM]="delta-${tag}-arm-unknown-linux-musleabihf.tar.gz"
   [Linux_X86]="delta-${tag}-i686-unknown-linux-musl.tar.gz"
-  [MacOS_X64]="delta-${tag}-x86_64-apple-darwin.tar.gz"
-  [MacOS_ARM64]="delta-${tag}-aarch64-apple-darwin.tar.gz"
+  [macOS_X64]="delta-${tag}-x86_64-apple-darwin.tar.gz"
+  [macOS_ARM64]="delta-${tag}-aarch64-apple-darwin.tar.gz"
 )
 declare -r asset_map
 echo "RUNNER OS: ${RUNNER_OS}, RUNNER ARCH: ${RUNNER_ARCH}"
