@@ -113,6 +113,7 @@ print "${CYAN}" "Adding delta to PATH...\n"
 echo "${DELTA_HOME}" >> "${GITHUB_PATH}"
 
 print "${CYAN}" 'Testing that the delta executable works...\n'
+ls -l "${DELTA_HOME}"
 "${DELTA_HOME}/delta" --version
 
 print "${CYAN}" 'Downloading delta themes...\n'
