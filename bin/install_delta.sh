@@ -14,7 +14,9 @@ readonly GREEN
 readonly CYAN
 readonly RESET
 
-readonly DELTA_HOME="${DELTA_ACTION_HOME:-${HOME}/.delta}"
+DELTA_HOME="$(realpath "${DELTA_ACTION_HOME:-${HOME}/.delta}")"
+readonly DELTA_HOME
+
 echo "DELTA_HOME: ${DELTA_HOME}"
 if [[ -e "${DELTA_HOME}" ]]; then
   rm -rf "${DELTA_HOME}"
@@ -76,10 +78,10 @@ readonly tag
 declare -A asset_map
 asset_map=(
   [Windows_X64]="delta-${tag}-x86_64-pc-windows-msvc.zip"
-  [Linux_X64]="delta-${tag}-x86_64-unknown-linux-gnu.tar.gz"
-  [Linux_ARM64]="delta-${tag}-aarch64-unknown-linux-gnu.tar.gz"
-  [Linux_ARM]="delta-${tag}-arm-unknown-linux-gnueabihf.tar.gz"
-  [Linux_X86]="delta-${tag}-i686-unknown-linux-gnu.tar.gz"
+  [Linux_X64]="delta-${tag}-x86_64-unknown-linux-musl.tar.gz"
+  [Linux_ARM64]="delta-${tag}-aarch64-unknown-linux-musl.tar.gz"
+  [Linux_ARM]="delta-${tag}-arm-unknown-linux-musleabihf.tar.gz"
+  [Linux_X86]="delta-${tag}-i686-unknown-linux-musl.tar.gz"
   [MacOS_X64]="delta-${tag}-x86_64-apple-darwin.tar.gz"
   [MacOS_ARM64]="delta-${tag}-aarch64-apple-darwin.tar.gz"
 )
