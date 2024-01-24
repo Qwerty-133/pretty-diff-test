@@ -29,6 +29,9 @@ runs:
       shell: bash
       run: brew install bash
 
+    - run: bash --version
+      shell: bash
+
     - name: Install delta
       shell: bash
       run: "${GITHUB_ACTION_PATH}/bin/install_delta.sh"
