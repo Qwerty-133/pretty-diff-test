@@ -15,6 +15,7 @@ readonly CYAN
 readonly RESET
 
 readonly DELTA_HOME="${DELTA_ACTION_HOME:-${HOME}/.delta}"
+echo "DELTA_HOME: ${DELTA_HOME}"
 if [[ -e "${DELTA_HOME}" ]]; then
   rm -rf "${DELTA_HOME}"
 fi
