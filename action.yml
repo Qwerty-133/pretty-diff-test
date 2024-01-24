@@ -24,6 +24,11 @@ runs:
   using: "composite"
 
   steps:
+    - name: Install the latest bash version
+      if: ${{ runner.os == 'macOS' }}
+      shell: bash
+      run: brew install bash
+
     - name: Install delta
       shell: bash
       run: "${GITHUB_ACTION_PATH}/bin/install_delta.sh"
