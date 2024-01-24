@@ -33,7 +33,7 @@ runs:
       shell: bash
 
     - name: Install delta
-      shell: bash
+      shell: bash --noprofile --norc -eo pipefail {0}
       run: "${GITHUB_ACTION_PATH}/bin/install_delta.sh"
       env:
         GITHUB_TOKEN: ${{ github.token }}
