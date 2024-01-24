@@ -22,8 +22,9 @@ runs:
   steps:
     - name: Install delta
       shell: bash
-      run: "${GITHUB_ACTION_PATH}/install_delta.sh"
+      run: "${GITHUB_ACTION_PATH}/bin/install_delta.sh"
       env:
         GITHUB_TOKEN: ${{ github.token }}
         DELTA_ACTION_VERSION: ${{ inputs.version }}
         DELTA_ACTION_HOME: ${{ inputs.delta-home }}
+        DELTA_ENABLE_HYPERLINKS: ${{ inputs.enable-hyperlinks }}

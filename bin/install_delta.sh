@@ -21,20 +21,16 @@ fi
 mkdir -p "${DELTA_HOME}"  # --parents
 
 readonly HEADER="Authorization: Bearer ${GITHUB_TOKEN}"
-read -r -d '' ALIAS_SCRIPT <<EOM || true
-#!/bin/bash
-git diff --color "\$@" | delta
-EOM
 readonly DELTA_DEFAULTS=(
   'merge.conflictstyle: diff3'
   "include.path: ${DELTA_HOME}/themes.gitconfig"
   'diff.colorMoved: default'
 
   'delta.paging: never'
-  'delta.true-color: never'
+  'delta.true-color: always'
   'delta.navigate: false'
   'delta.dark: true'
-  'delta.hyperlinks: false'
+  'delta.hyperlinks: true'
 
   'delta.features: mantis-shrimp'
   'delta.side-by-side: false'
@@ -132,8 +128,13 @@ for default in "${DELTA_DEFAULTS[@]}"; do
   git config --global "${key}" "${value}"
 done
 
-print "${CYAN}" 'Creating the pretty-diff alias...\n'
-echo "${ALIAS_SCRIPT}" > "${DELTA_HOME}/pretty-diff"
+if [[ "${ENABLE_HYPERLINKS}" == 'true' ]]; then
+  print "${CYAN}" 'Creating the pretty-diff alias (hyperlinks enabled)...\n'
+  cp "${GITHUB_ACTION_PATH}/bin/pretty_diff_hyperlinks.sh" "${DELTA_HOME}/pretty-diff"
+else
+  print "${CYAN}" 'Creating the pretty-diff alias (hyperlinks disabled)...\n'
+  cp "${GITHUB_ACTION_PATH}/bin/pretty_diff_simple.sh" "${DELTA_HOME}/pretty-diff"
+fi
 chmod +x "${DELTA_HOME}/pretty-diff"
 
 print "${GREEN}" "Successfully installed delta v${tag}.\n"
