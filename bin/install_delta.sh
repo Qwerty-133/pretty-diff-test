@@ -34,7 +34,7 @@ readonly DELTA_DEFAULTS=(
   'delta.features: mantis-shrimp'
   'delta.side-by-side: false'
   'delta.keep-plus-minus-markers: false'
-  'delta.blame-palette = "#101010 #200020 #002800 #000028 #202000 #280000 #002020 #002800 #202020"'
+  'delta.blame-palette: #101010 #200020 #002800 #000028 #202000 #280000 #002020 #002800 #202020'
   'delta.plus-style: syntax'
   'delta.minus-style: syntax'
 )
