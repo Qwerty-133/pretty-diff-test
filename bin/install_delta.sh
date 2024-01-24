@@ -14,7 +14,7 @@ readonly GREEN
 readonly CYAN
 readonly RESET
 
-DELTA_HOME="$(realpath "${DELTA_ACTION_HOME:-${HOME}/.delta}")"
+DELTA_HOME="$(realpath --canonicalize-missing "${DELTA_ACTION_HOME:-${HOME}/.delta}")"
 readonly DELTA_HOME
 
 echo "DELTA_HOME: ${DELTA_HOME}"
