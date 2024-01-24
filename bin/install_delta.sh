@@ -110,7 +110,8 @@ print "${CYAN}" "Moving files to ${DELTA_HOME}...\n"
 mv "${RUNNER_TEMP}/${files_dir}" "${DELTA_HOME}"
 
 print "${CYAN}" "Adding delta to PATH...\n"
-"$(readlink -f "${DELTA_HOME}")" >> "${GITHUB_PATH}"
+resolved_delta_home="$(cd "${DELTA_HOME}" && pwd)"
+"$(readlink -f "${DELTA_HOME}")" >> "${resolved_delta_home}"
 
 print "${CYAN}" 'Testing that the delta executable works...\n'
 ls -l "${DELTA_HOME}"
