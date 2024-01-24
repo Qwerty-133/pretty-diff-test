@@ -1,2 +1,2 @@
 #!/bin/bash
-git diff --color "\$@" | delta
+git diff --color "$@" | delta
