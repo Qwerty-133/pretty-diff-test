@@ -18,7 +18,6 @@ readonly DELTA_HOME="${DELTA_ACTION_HOME:-${HOME}/.delta}"
 if [[ -e "${DELTA_HOME}" ]]; then
   rm -rf "${DELTA_HOME}"
 fi
-mkdir -p "${DELTA_HOME}"  # --parents
 
 readonly HEADER="Authorization: Bearer ${GITHUB_TOKEN}"
 readonly DELTA_DEFAULTS=(
