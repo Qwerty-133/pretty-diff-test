@@ -111,7 +111,7 @@ mv "${RUNNER_TEMP}/${files_dir}" "${DELTA_HOME}"
 
 print "${CYAN}" "Adding delta to PATH...\n"
 resolved_delta_home="$(cd "${DELTA_HOME}" && pwd)"
-"$(readlink -f "${DELTA_HOME}")" >> "${resolved_delta_home}"
+echo "${resolved_delta_home}" >> "${resolved_delta_home}"
 
 print "${CYAN}" 'Testing that the delta executable works...\n'
 ls -l "${DELTA_HOME}"
