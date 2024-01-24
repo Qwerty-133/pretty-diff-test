@@ -5,6 +5,8 @@ on:
     paths:
       - ".github/workflows/test.yml"
       - "tests/**"
+      - "bin/**"
+      - "action.yml"
   workflow_dispatch:
 
 permissions:
