@@ -14,7 +14,7 @@ readonly GREEN
 readonly CYAN
 readonly RESET
 
-DELTA_HOME="$(readlink -m "${DELTA_ACTION_HOME:-${HOME}/.delta}")" # --canonicalize-missing
+DELTA_HOME="$(readlink "${DELTA_ACTION_HOME:-${HOME}/.delta}")" # --canonicalize-missing
 readonly DELTA_HOME
 
 echo "DELTA_HOME: ${DELTA_HOME}"
