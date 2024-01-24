@@ -14,10 +14,8 @@ readonly GREEN
 readonly CYAN
 readonly RESET
 
-DELTA_HOME="$(readlink "${DELTA_ACTION_HOME:-${HOME}/.delta}")" # --canonicalize-missing
-readonly DELTA_HOME
+DELTA_HOME="${DELTA_ACTION_HOME:-${HOME}/.delta}"
 
-echo "DELTA_HOME: ${DELTA_HOME}"
 if [[ -e "${DELTA_HOME}" ]]; then
   rm -rf "${DELTA_HOME}"
 fi
@@ -112,7 +110,7 @@ print "${CYAN}" "Moving files to ${DELTA_HOME}...\n"
 mv "${RUNNER_TEMP}/${files_dir}" "${DELTA_HOME}"
 
 print "${CYAN}" "Adding delta to PATH...\n"
-echo "${DELTA_HOME}" >> "${GITHUB_PATH}"
+"$(readlink -f "${DELTA_HOME}")" >> "${GITHUB_PATH}"
 
 print "${CYAN}" 'Testing that the delta executable works...\n'
 ls -l "${DELTA_HOME}"
